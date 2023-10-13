@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Outfit-ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitSemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/OutfitBlack.woff") format("woff");
+}
