@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+
+    <!-- cdn for font ganteng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="payment.js" defer></script>
+</head>
+
+<body>
+    <!-- tag header -->
+    <header id="header" class="">
+        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-7 py-4">
+            <!-- logo -->
+            <img src="/assets/images/Logo-Mangan.png" alt="" id="img-nav" class="w-28 h-6">
+            <!-- logo -->
+
+            <!-- list navigasi -->
+            <ul id="list-nav" class="flex gap-11 text-[#DE283B] font-bold">
+                <li id="list-item">Home</li>
+                <li id="list-item">About</li>
+                <li id="list-item">Catering Package</li>
+                <li id="list-item">Contact Us</li>
+            </ul>
+            <!-- end of list navigasi -->
+
+            <div id="search" class="flex gap-1 items-center">
+                <div id="nav-search"
+                    class="w-80 h-8 flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                    <i id="search-icon" class="fa fa-search ml-2 text-[#DE283B] cursor-pointer" aria-hidden="true"></i>
+                    <input type="search" name="" id="search-input" class="w-full mr-2 outline-none"
+                        placeholder="cari paket yang anda inginkan">
+                </div>
+                <!-- avatar image -->
+                <img src="/assets/images/avatar.jpg" alt="" id="avatar-nav" class="w-10 h-10 rounded-full">
+            </div>
+        </nav>
+    </header>
+    <!-- end tag header -->
+</body>
+
+</html>
