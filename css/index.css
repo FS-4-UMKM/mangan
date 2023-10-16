@@ -65,6 +65,12 @@ nav {
     gap: 10px;
 }
 
+#header-masuk-daftar a{
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
 .btn-masuk {
     font-size: 1.3vw;
     font-weight: 500;
@@ -264,6 +270,10 @@ nav {
     display: flex;
     gap: 4%;
     margin: 4% 3%;
+}
+
+.cont-hows a{
+    text-decoration: none;
 }
 
 .content-hows {
