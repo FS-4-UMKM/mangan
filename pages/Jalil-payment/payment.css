@@ -9,3 +9,11 @@ html {
     padding: 0;
     margin: 0;
 }
+
+#form-name,
+#form-porsi,
+#form-date,
+#form-payment,
+#form-address {
+    border: 1px solid black;
+}
