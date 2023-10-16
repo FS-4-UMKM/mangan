@@ -7,6 +7,9 @@
     <title>Payment</title>
     <link rel="stylesheet" href="payment.css">
 
+    <!-- icons -->
+    <link rel="shortcut icon" href="/assets/icons/logo/logo-icon-mangan.svg" />
+
     <!-- cdn for font ganteng -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -21,7 +24,7 @@
 <body>
     <!-- tag header -->
     <header id="header" class="">
-        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-7 py-4">
+        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-14 py-4 w-full">
             <!-- logo -->
             <img src="/assets/images/Logo-Mangan.png" alt="" id="img-nav" class="w-28 h-6">
             <!-- logo -->
@@ -48,6 +51,96 @@
         </nav>
     </header>
     <!-- end tag header -->
+
+    <main id="detail-payment" class="mx-14 my-20">
+        <div id="title">
+            <h1 class="font-bold text-2xl">Checkout</h1>
+        </div>
+        <div id="container" class="mt-9 flex gap-20">
+            <!-- form untuk detail pembayaran -->
+            <section id="detail-form" class="flex-column">
+                <form action="/checkout" method="post" class="flex-column">
+
+                    <!-- form pertama -->
+                    <div id="first-form" class="flex items-center gap-10">
+                        <div id="name">
+                            <label for="name">Nama Penerima</label><br>
+                            <div id="form-name" class="w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-user text-[#DE283B]"></i>
+                                <input type="text" name="username" id="input-name" class="w-full mr-2 outline-none"
+                                    placeholder="masukan nama penerima" value="">
+                            </div>
+                        </div>
+
+                        <div id="porsi">
+                            <label for="porsi">Jumlah Porsi</label><br>
+                            <div id="form-porsi" class="w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-bowl-food text-[#DE283B]"></i>
+                                <input type="text" name="porsi" id="input-porsi" class="w-full mr-2 outline-none"
+                                    placeholder="Masukan jumlah porsi" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form pertama -->
+
+                    <!-- form kedua -->
+                    <div id="second-form" class="flex items-center gap-10 mt-4">
+                        <div id="date">
+                            <label for="date">Tanggal Acara</label><br>
+                            <div id="form-date" class="w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-calendar-days text-[#DE283B]"></i>
+                                <input type="date" name="date" id="input-date" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih Tanggal" value="">
+                            </div>
+                        </div>
+
+                        <div id="payment">
+                            <label for="payment">Pilih pembayaran</label><br>
+                            <div id="form-payment"
+                                class="w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
+                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih pembayaran" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form kedua -->
+
+                    <div id="extra-note" class="mt-4">
+                        <div id="address">
+                            <label for="address">Alamat Lengkap</label><br>
+                            <div id="form-address"
+                                class="w-[618px] h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
+                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih pembayaran" value="">
+                            </div>
+                        </div>
+
+                        <div id="address">
+                            <label for="address">Alamat Lengkap</label><br>
+                            <div id="form-address"
+                                class="w-[618px] h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2 ">
+                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih pembayaran" value="">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <!-- form untuk detail pembayaran -->
+
+            <!-- detail produk -->
+            <section id="produk-detail">
+                <div id="img-detail">
+                    <h1>Detail Pesanan</h1>
+                    <img class="w-48 h-[175px] rounded-[10px]" src="https://via.placeholder.com/192x175" />
+                    <p>total harga</p>
+                    <h1 class="font-bold font-xl">Rp.1,000,000</h1>
+                </div>
+            </section>
+            <!-- detail produk -->
+        </div>
+    </main>
 </body>
 
 </html>
