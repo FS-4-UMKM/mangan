@@ -1,9 +1,29 @@
-// Ambil elemen-elemen HTML yang diperlukan
+
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-icon");
 
-// Tambahkan event listener ke tombol pencarian
+// function untuk focus ke input pencarian
 searchButton.addEventListener("click", function () {
-    // Fokuskan kursor ke input pencarian
     searchInput.focus();
 });
+
+
+// Path: pages/jalil-checkout/checkout.js
+const btnCheckout = document.getElementById("btn-checkout");
+const btnBatal = document.getElementById("btn-batal");
+const btnAgree = document.getElementById("btn-agree");
+
+btnCheckout.addEventListener("click", function () {
+    modal.style.display = "block";
+});
+
+btnBatal.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+function redirectToNewPage() {
+    window.location.href = 'https://www.google.com/';
+}
+
+console.log(redirectToNewPage);
+
