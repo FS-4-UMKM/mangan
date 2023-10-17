@@ -14,6 +14,11 @@ html {
 #form-porsi,
 #form-date,
 #form-payment,
-#form-address {
+#form-address,
+#form-note {
     border: 1px solid black;
+}
+
+input[type="date"] {
+    order: -1;
 }
