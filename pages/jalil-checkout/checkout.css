@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap");
 
 html {
-    font-family: 'outfit', sans-serif;
+  font-family: "outfit", sans-serif;
 }
 
-
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #form-name,
@@ -16,9 +15,5 @@ html {
 #form-payment,
 #form-address,
 #form-note {
-    border: 1px solid black;
-}
-
-input[type="date"] {
-    order: -1;
+  border: 1px solid black;
 }
