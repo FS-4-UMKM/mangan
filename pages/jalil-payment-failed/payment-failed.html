@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>payment failed</title>
     <link rel="stylesheet" href="checkout.css">
     <!-- ===== File styling Header & Footer -->
     <link rel="stylesheet" href="/css/header-footer.css" />
@@ -102,7 +101,7 @@
             </div>
 
             <!-- Hamburger Bar Menu -->
-            <div class="ham-bar block md:hidden ml-8 ">
+            <div class="ham-bar block md:hidden ml-8">
                 <input id="checkbox2" type="checkbox" />
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
@@ -114,136 +113,11 @@
     </header>
     <!-- end header -->
 
+    <!-- start content -->
+    <main>
 
-    <main id="detail-checkout" class="md:mx-9 mx-5 my-5">
-        <div id="title">
-            <h1 class="font-bold text-2xl">Checkout</h1>
-        </div>
-        <div id="container" class="mt-9 md:flex gap-20">
-            <!-- form untuk detail pembayaran -->
-            <section id="detail-form" class="flex-column ">
-                <form action="/checkout" method="post" class="flex-column ">
-
-                    <!-- form pertama -->
-                    <div id="first-form" class="md:flex md:items-center gap-10 ">
-                        <div id="name">
-                            <label for="name">Nama Penerima</label><br>
-                            <div id="form-name"
-                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
-                                <i class="fa-solid fa-user text-[#DE283B]"></i>
-                                <input type="text" name="username" id="input-name" class="w-full mr-2 outline-none"
-                                    placeholder="masukan nama penerima" value="">
-                            </div>
-                        </div>
-
-                        <div id="porsi">
-                            <label for="porsi">Jumlah Porsi</label><br>
-                            <div id="form-porsi"
-                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
-                                <i class="fa-solid fa-bowl-food text-[#DE283B]"></i>
-                                <input type="text" name="porsi" id="input-porsi" class="w-full mr-2 outline-none"
-                                    placeholder="Masukan jumlah porsi" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- form pertama -->
-
-                    <!-- form kedua -->
-                    <div id="second-form" class="md:flex items-center gap-10 mt-4">
-                        <div id="date">
-                            <label for="date">Tanggal Acara</label><br>
-                            <div id="form-date"
-                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
-                                <input type="date" name="date" id="input-date" class="w-full mr-2 outline-none"
-                                    placeholder="Pilih Tanggal" value="">
-                            </div>
-                        </div>
-
-                        <div id="payment">
-                            <label for="payment">Pilih pembayaran</label><br>
-                            <div id="form-payment"
-                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
-                                <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
-                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
-                                    placeholder="Pilih pembayaran" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- form kedua -->
-
-                    <div id="extra-note" class="mt-4 ">
-                        <div id="address">
-                            <label for="address">Alamat Lengkap</label><br>
-                            <div id="form-address"
-                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
-                                <input type="text" name="address" id="input-address" class="w-full mr-2 outline-none"
-                                    placeholder="Alamat Lengkap" value="">
-                            </div>
-                        </div>
-
-                        <div id="note">
-                            <label for="note">Catatan</label><br>
-                            <div id="form-note"
-                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2 ">
-                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
-                                    placeholder="Tambahkan catatan jika perlu" value="">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </section>
-            <!-- form untuk detail pembayaran -->
-
-            <!-- detail produk -->
-            <section id="produk-detail" class="shadow-2xl rounded-xl p-3 md:shadow-none">
-                <h1 class="font-bold">Detail Pesanan</h1>
-                <div id="detail-pesanan" class="flex gap-6 my-2">
-                    <div id="img-pesanan" class=" w-2/4">
-                        <img class="w-full h-auto rounded-[10px]" src="https://via.placeholder.com/192x175" />
-                        <div id="total-price" class="mt-4">
-                            <p id="text-total">total harga</p>
-                            <p id="text-price" class="font-bold">Rp. 1,000,000</p>
-                        </div>
-                    </div>
-                    <div id="deskripsi-pesanan" class="-mt-1 w-2/4">
-                        <h1 class="font-bold">Catering Lezat</h1>
-                        <h3>Paket A</h3>
-                        <ul id="list-pesanan" class="list-disc px-6 text-[15px]">
-                            <li id="list-item-pesanan">nasi</li>
-                            <li id="list-item-pesanan">Cak Kangkung</li>
-                            <li id="list-item-pesanan">Ayam Goreng</li>
-                            <li id="list-item-pesanan">Sambal</li>
-                            <li id="list-item-pesanan">Kerupuk</li>
-                        </ul>
-                        <p id="harga" class="font-bold">Rp.20,000/porsi</p>
-                        <button id="btn-checkout"
-                            class="md:w-[180px] h-[46px] px-8 py-2 mt-4 bg-rose-600 hover:bg-rose-900 rounded-xl justify-center items-center text-white">Checkout</button>
-                    </div>
-                </div>
-            </section>
-            <!-- detail produk -->
-        </div>
-
-        <div id="modal"
-            class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed hidden shadow-2xl rounded-xl p-3 bg-white ">
-            <div id="modal-header" class="mb-5">
-                <h1 class="font-bold text-[#DE283B]">Konfirmasi</h1>
-            </div>
-            <div id="modal-body">
-                <h1 class="font-bold mb-3">Apakah anda yakin ingin melakukan checkout?</h1>
-                <p class="text-[#DE283B]">Pastikan data yang diinputkan benar dan pastikan pesanan yang anda pilih
-                    sesuai. Selanjutnya anda
-                    akan diarahkan untuk pembayaran.</p>
-            </div>
-            <div class="flex gap-5 justify-center mt-5 items-end">
-                <button id="btn-batal" class="shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
-                <button id="btn-agree" class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white"
-                    onclick="redirectToNewPage()">Checkout</button>
-            </div>
-
-        </div>
     </main>
-
+    <!-- end of content -->
 
     <!-- start footer -->
     <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
