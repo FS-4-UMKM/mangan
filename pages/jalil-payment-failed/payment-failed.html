@@ -114,8 +114,106 @@
     <!-- end header -->
 
     <!-- start content -->
-    <main>
+    <main id="content" class="m-4 md:flex md:gap-10 flex ">
+        <section id="img-failed" class="flex-row hidden md:block">
+            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Di batalkan
+            </h1>
+            <img src="/assets/images/payment-failed.png" alt="" class="w-[500px] h-[500px]">
+        </section>
 
+        <section id="detail-failed" class="w-full flex-row space-y-4 ">
+            <!-- div untuk Tanggal pesanan -->
+            <div id=" date-number" class="flex w-full text-[10px] h-auto px-2 py-5 rounded-md gap-5 bg-red-200 shadow ">
+                <div id="date-order-failed">
+                    <p class=" text-[#005461]">Tanggal Pesanan
+                    </p>
+                    <p id="date" class="font-[800]">7 September 2023
+                    </p>
+                </div>
+                <div id="number-order-container">
+                    <p class=" text-[#005461]">Nomor Pesanan
+                    </p>
+                    <p id="number-order" class="font-[800]">P00107092023S1BOX1
+                    </p>
+                </div>
+                <div id="method-payment-container">
+                    <p class=" text-[#005461]">Metode Pembayaran
+                    </p>
+                    <p id="method-payment" class="font-[800]">QRIS
+                    </p>
+                </div>
+            </div>
+            <!-- div untuk Tanggal pesanan -->
+
+            <!-- div untuk detail pesanan yang di batalkan -->
+            <div id="order-failed-container"
+                class="flex w-full text-[10px] md:text-xl h-auto px-2 py-5 rounded-md justify-between bg-red-200 shadow ">
+
+                <!-- gambar dan detail pesanan yang di batalkan -->
+                <img id="img-date-failed" class="w-20 h-20 my-auto rounded-[10px] border border-rose-600"
+                    src="https://via.placeholder.com/95x95" />
+                <div id="order-failed">
+                    <h1 id="title-order-failed" class="font-bold text-[#005461]">Paket Nazi Pak Adolf
+                    </h1>
+                    <p id="date" class="text-[9px]">Menu A
+                    </p>
+                    <p id="price-failed" class="font-[700]">Rp.20.000/porsi</p>
+                </div>
+                <!-- gambar dan detail pesanan yang di batalkan -->
+
+                <!-- list menu yang di batalkan -->
+                <div id="menu-failed">
+                    <p id="isi-menu-failed" class=" text-[#005461] font-[800]">Isi Menu A
+                    </p>
+                    <ul id="list-menu-failed" class="list-disc px-3">
+                        <li id="item-menu-failed">nasi</li>
+                        <li id="item-menu-failed">Oseng Kangkung</li>
+                        <li id="item-menu-failed">Ayam gemes</li>
+                        <li id="item-menu-failed">lalapan</li>
+                        <li id="item-menu-failed">Kerupuk</li>
+                    </ul>
+                </div>
+                <!-- list menu yang di batalkan -->
+            </div>
+            <!-- div untuk detail pesanan yang di batalkan -->
+
+            <!-- infomasi pesanan yang di batalkan -->
+            <div id="info-order-failed"
+                class="flex w-full text-[10px] h-auto px-2 py-5 rounded-md gap-5 bg-red-200 shadow">
+                <div id="info" class="">
+                    <h1 class="font-semibold text-[#005461]">informasi</h1>
+                    <table class="text-left">
+                        <tr>
+                            <th>Acara</th>
+                            <td>15 September 2019</td>
+                        </tr>
+                        <tr>
+                            <th>Porsi</th>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <th>Catatan</th>
+                            <td>Akoakowkaow</td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div id="number-order-container">
+                    <p class=" text-[#005461]">Nomor Pesanan
+                    </p>
+                    <p id="number-order" class="font-[800]">P00107092023S1BOX1
+                    </p>
+                </div>
+                <div id="method-payment-container">
+                    <p class=" text-[#005461]">Metode Pembayaran
+                    </p>
+                    <p id="method-payment" class="font-[800]">QRIS
+                    </p>
+                </div>
+            </div>
+            <!-- infomasi pesanan yang di batalkan -->
+
+        </section>
     </main>
     <!-- end of content -->
 
