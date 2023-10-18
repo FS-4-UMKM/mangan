@@ -114,16 +114,17 @@
     <!-- end header -->
 
     <!-- start content -->
-    <main id="content" class="m-4 md:flex md:gap-10 flex ">
+    <main id="content" class="m-4 md:flex md:justify-between md:gap-20 flex ">
         <section id="img-failed" class="flex-row hidden md:block">
             <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Di batalkan
             </h1>
             <img src="/assets/images/payment-failed.png" alt="" class="w-[500px] h-[500px]">
         </section>
 
-        <section id="detail-failed" class="w-full flex-row space-y-4 ">
+        <section id="detail-failed" class="w-full md:w-1/2 flex-row space-y-4 ">
             <!-- div untuk Tanggal pesanan -->
-            <div id=" date-number" class="flex w-full text-[10px] h-auto px-2 py-5 rounded-md gap-5 bg-red-200 shadow ">
+            <div id=" date-number"
+                class="flex w-full text-[10px] min-[500px]:justify-between min-[500px]:text-sm md:justify-around h-auto md:px-7 px-2 py-5 rounded-md gap-5 bg-red-200 shadow ">
                 <div id="date-order-failed">
                     <p class=" text-[#005461]">Tanggal Pesanan
                     </p>
@@ -147,15 +148,18 @@
 
             <!-- div untuk detail pesanan yang di batalkan -->
             <div id="order-failed-container"
-                class="flex w-full text-[10px] md:text-xl h-auto px-2 py-5 rounded-md justify-between bg-red-200 shadow ">
+                class="flex w-full text-[10px] min-[500px]:text-sm min-[500px]:justify-around  h-auto md:px-7 px-2 py-5 rounded-md justify-between bg-red-200 shadow ">
 
                 <!-- gambar dan detail pesanan yang di batalkan -->
-                <img id="img-date-failed" class="w-20 h-20 my-auto rounded-[10px] border border-rose-600"
-                    src="https://via.placeholder.com/95x95" />
+                <div id="">
+                    <img id="img-date-failed"
+                        class="w-20 h-20 md:w-44 md:h-36 my-auto   rounded-[10px] border border-rose-600"
+                        src="https://via.placeholder.com/95x95" />
+                </div>
                 <div id="order-failed">
                     <h1 id="title-order-failed" class="font-bold text-[#005461]">Paket Nazi Pak Adolf
                     </h1>
-                    <p id="date" class="text-[9px]">Menu A
+                    <p id="date" class="text-[9px] md:text-sm">Menu A
                     </p>
                     <p id="price-failed" class="font-[700]">Rp.20.000/porsi</p>
                 </div>
@@ -179,40 +183,65 @@
 
             <!-- infomasi pesanan yang di batalkan -->
             <div id="info-order-failed"
-                class="flex w-full text-[10px] h-auto px-2 py-5 rounded-md gap-5 bg-red-200 shadow">
-                <div id="info" class="">
-                    <h1 class="font-semibold text-[#005461]">informasi</h1>
-                    <table class="text-left">
-                        <tr>
-                            <th>Acara</th>
-                            <td>15 September 2019</td>
-                        </tr>
-                        <tr>
-                            <th>Porsi</th>
-                            <td>150</td>
-                        </tr>
-                        <tr>
-                            <th>Catatan</th>
-                            <td>Akoakowkaow</td>
-                        </tr>
-                    </table>
+                class="flex w-full text-[10px] min-[500px]:text-[14px]  h-auto gap-3 md:px-7 px-2 py-5 rounded-md bg-red-200 shadow">
+                <!-- keterangan pesanan yang di batalkan -->
+                <div id="Keterangan-failed" class="">
+                    <h1 class="font-bold mb-1">Keterangan</h1>
+                    <div class="py-1">
+                        <p class="leading-none mb-[3px] font-bold ">Tgl acara:</p>
+                        <p id="tgl-acara" class="leading-none font-medium text-[#005461]">20 Oktober 2023, 10.00 WIB</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="leading-none mb-[3px] font-bold">Jumlah porsi:</p>
+                        <p id="jumlah-porsi" class="leading-none font-medium text-[#005461]">120</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="leading-none mb-[3px] font-bold">Catatan:</p>
+                        <p id="catatan" class="leading-none font-medium text-[#005461]">Mohon kirim 2 jam sebelum acara
+                            dimulai ya.</p>
+                    </div>
+                </div>
+                <!-- keterangan pesanan yang di batalkan -->
 
+                <!-- pengirim batal -->
+                <div id="pengirim-batal">
+                    <p class="font-bold text-[#005461]">Pengirim
+                    </p>
+                    <p id="pengirim" class="font-bold">Catering Lezat
+                    </p>
+                    <p id="alamat-pengirim" class="">Jl. Mawar No. 78, Jakarta
+                    </p>
+                    <p id="kontak-pengirim" class="">WhatsApp +62 813-9876-5432
+                    </p>
+                    <p id="email-pengirim" class="">cateringlezat@.mail.com.
+                    </p>
                 </div>
-                <div id="number-order-container">
-                    <p class=" text-[#005461]">Nomor Pesanan
+                <!-- pengirim batal -->
+                <div id="penerima-batal">
+                    <p class="font-bold text-[#005461]">Penerima
                     </p>
-                    <p id="number-order" class="font-[800]">P00107092023S1BOX1
+                    <p id="Penerima" class="font-bold">Jamanlang Jawir
                     </p>
-                </div>
-                <div id="method-payment-container">
-                    <p class=" text-[#005461]">Metode Pembayaran
+                    <p id="alamat-penerima">Jl. Anggrek No. 45, Jakarta
                     </p>
-                    <p id="method-payment" class="font-[800]">QRIS
+                    <p id="kontak-penerima"> WhatsApp +62 812-123-4567
+                    </p>
+                    <p id="email-penerima">jamalangjawir@email.com
                     </p>
                 </div>
             </div>
             <!-- infomasi pesanan yang di batalkan -->
 
+            <div id="total-pembayaran-gagal"
+                class="flex w-full min-[500px]:text-sm text-[10px] h-auto  justify-between md:px-7 px-2 py-3 rounded-md gap-5 bg-red-200 shadow">
+                <div class="font-[#005461] font-bold">Total Pembayaran</div>
+                <div class="font-bold">Rp 100.000.000,00</div>
+            </div>
+
+            <button id="btn-back"
+                class="px-5 py-2  bg-red-200 hover:bg-rose-500 hover:text-slate-50 flex m-auto rounded-xl border border-rose-600 justify-center items-center">kembali
+                ke
+                menu utama</button>
         </section>
     </main>
     <!-- end of content -->
