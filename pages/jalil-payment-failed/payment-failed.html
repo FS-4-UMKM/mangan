@@ -18,7 +18,7 @@
     <!-- cdn tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="checkout.js" defer></script>
+    <script src="payment-failed.js" defer></script>
     <!-- ===== File JS Header & Footer -->
     <script src="/js/header-footer.js" defer></script>
 </head>
@@ -186,8 +186,8 @@
                 class="flex w-full text-[10px] min-[500px]:text-[14px]  h-auto gap-3 md:px-7 px-2 py-5 rounded-md bg-red-200 shadow">
                 <!-- keterangan pesanan yang di batalkan -->
                 <div id="Keterangan-failed" class="">
-                    <h1 class="font-bold mb-1">Keterangan</h1>
-                    <div class="py-1">
+                    <h1 class="font-bold text-[#005461]">Keterangan</h1>
+                    <div class="">
                         <p class="leading-none mb-[3px] font-bold ">Tgl acara:</p>
                         <p id="tgl-acara" class="leading-none font-medium text-[#005461]">20 Oktober 2023, 10.00 WIB</p>
                     </div>
@@ -238,7 +238,7 @@
                 <div class="font-bold">Rp 100.000.000,00</div>
             </div>
 
-            <button id="btn-back"
+            <button id="btn-back" onclick="redirectToNewPage()"
                 class="px-5 py-2  bg-red-200 hover:bg-rose-500 hover:text-slate-50 flex m-auto rounded-xl border border-rose-600 justify-center items-center">kembali
                 ke
                 menu utama</button>
