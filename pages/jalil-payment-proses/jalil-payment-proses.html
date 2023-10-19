@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payment failed</title>
+    <title>payment process</title>
     <link rel="stylesheet" href="checkout.css">
     <!-- ===== File styling Header & Footer -->
     <link rel="stylesheet" href="/css/header-footer.css" />
@@ -18,7 +18,7 @@
     <!-- cdn tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="payment-failed.js" defer></script>
+    <script src="payment-process.js" defer></script>
     <!-- ===== File JS Header & Footer -->
     <script src="/js/header-footer.js" defer></script>
 </head>
@@ -115,17 +115,17 @@
 
     <!-- start content -->
     <main id="content" class="m-4 md:flex md:justify-around md:gap-20 flex ">
-        <section id="img-failed" class="flex-row hidden md:block">
-            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Di batalkan
+        <section id="img-process" class="flex-row hidden md:block">
+            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan sedang di proses
             </h1>
-            <img src="/assets/images/payment-failed.png" alt="" class="w-[400px] h-auto">
+            <img src="/assets/images/payment-process.png" alt="" class="w-[400px] h-auto">
         </section>
 
-        <section id="detail-failed" class="w-full md:w-1/2 flex-row space-y-4 ">
+        <section id="detail-process" class="w-full md:w-1/2 flex-row space-y-4 ">
             <!-- div untuk Tanggal pesanan -->
             <div id=" date-number"
                 class="flex w-full text-[10px] min-[500px]:justify-between min-[500px]:text-sm md:justify-around h-auto md:px-7 px-2 py-5 rounded-md gap-5 bg-red-200 shadow ">
-                <div id="date-order-failed">
+                <div id="date-order-process">
                     <p class=" text-[#005461]">Tanggal Pesanan
                     </p>
                     <p id="date" class="font-[800]">7 September 2023
@@ -146,46 +146,46 @@
             </div>
             <!-- div untuk Tanggal pesanan -->
 
-            <!-- div untuk detail pesanan yang di batalkan -->
-            <div id="order-failed-container"
+            <!-- div untuk detail pesanan yang di processkan -->
+            <div id="order-process-container"
                 class="flex w-full text-[10px] min-[500px]:text-sm min-[500px]:justify-around  h-auto md:px-7 px-2 py-5 rounded-md justify-between bg-red-200 shadow ">
 
-                <!-- gambar dan detail pesanan yang di batalkan -->
+                <!-- gambar dan detail pesanan yang di processkan -->
                 <div id="">
-                    <img id="img-date-failed"
+                    <img id="img-date-process"
                         class="w-20 h-20 md:w-44 md:h-36 my-auto   rounded-[10px] border border-rose-600"
                         src="https://via.placeholder.com/95x95" />
                 </div>
-                <div id="order-failed">
-                    <h1 id="title-order-failed" class="font-bold text-[#005461]">Paket Nazi Pak Adolf
+                <div id="order-process">
+                    <h1 id="title-order-process" class="font-bold text-[#005461]">Paket Nazi Pak Adolf
                     </h1>
                     <p id="date" class="text-[9px] md:text-sm">Menu A
                     </p>
-                    <p id="price-failed" class="font-[700]">Rp.20.000/porsi</p>
+                    <p id="price-process" class="font-[700]">Rp.20.000/porsi</p>
                 </div>
-                <!-- gambar dan detail pesanan yang di batalkan -->
+                <!-- gambar dan detail pesanan yang di processkan -->
 
-                <!-- list menu yang di batalkan -->
-                <div id="menu-failed">
-                    <p id="isi-menu-failed" class=" text-[#005461] font-[800]">Isi Menu A
+                <!-- list menu yang di processkan -->
+                <div id="menu-process">
+                    <p id="isi-menu-process" class=" text-[#005461] font-[800]">Isi Menu A
                     </p>
-                    <ul id="list-menu-failed" class="list-disc px-3">
-                        <li id="item-menu-failed">nasi</li>
-                        <li id="item-menu-failed">Oseng Kangkung</li>
-                        <li id="item-menu-failed">Ayam gemes</li>
-                        <li id="item-menu-failed">lalapan</li>
-                        <li id="item-menu-failed">Kerupuk</li>
+                    <ul id="list-menu-process" class="list-disc px-3">
+                        <li id="item-menu-process">nasi</li>
+                        <li id="item-menu-process">Oseng Kangkung</li>
+                        <li id="item-menu-process">Ayam gemes</li>
+                        <li id="item-menu-process">lalapan</li>
+                        <li id="item-menu-process">Kerupuk</li>
                     </ul>
                 </div>
-                <!-- list menu yang di batalkan -->
+                <!-- list menu yang di processkan -->
             </div>
-            <!-- div untuk detail pesanan yang di batalkan -->
+            <!-- div untuk detail pesanan yang di processkan -->
 
-            <!-- infomasi pesanan yang di batalkan -->
-            <div id="info-order-failed"
+            <!-- infomasi pesanan yang di processkan -->
+            <div id="info-order-process"
                 class="flex w-full text-[10px] min-[500px]:text-[14px]  h-auto gap-3 md:px-7 px-2 py-5 rounded-md bg-red-200 shadow">
-                <!-- keterangan pesanan yang di batalkan -->
-                <div id="Keterangan-failed" class="">
+                <!-- keterangan pesanan yang di processkan -->
+                <div id="Keterangan-process" class="">
                     <h1 class="font-bold text-[#005461]">Keterangan</h1>
                     <div class="">
                         <p class="leading-none mb-[3px] font-bold ">Tgl acara:</p>
@@ -201,10 +201,10 @@
                             dimulai ya.</p>
                     </div>
                 </div>
-                <!-- keterangan pesanan yang di batalkan -->
+                <!-- keterangan pesanan yang di process -->
 
-                <!-- pengirim batal -->
-                <div id="pengirim-batal">
+                <!-- pengirim process -->
+                <div id="pengirim-process">
                     <p class="font-bold text-[#005461]">Pengirim
                     </p>
                     <p id="pengirim" class="font-bold">Catering Lezat
@@ -216,8 +216,8 @@
                     <p id="email-pengirim" class="">cateringlezat@.mail.com.
                     </p>
                 </div>
-                <!-- pengirim batal -->
-                <div id="penerima-batal">
+                <!-- pengirim process -->
+                <div id="penerima-process">
                     <p class="font-bold text-[#005461]">Penerima
                     </p>
                     <p id="Penerima" class="font-bold">Jamanlang Jawir
@@ -230,18 +230,23 @@
                     </p>
                 </div>
             </div>
-            <!-- infomasi pesanan yang di batalkan -->
+            <!-- infomasi pesanan yang di processkan -->
 
-            <div id="total-pembayaran-gagal"
+            <div id="total-pembayaran-process"
                 class="flex w-full min-[500px]:text-sm text-[10px] h-auto  justify-between md:px-7 px-2 py-3 rounded-md gap-5 bg-red-200 shadow">
                 <div class="font-[#005461] font-bold">Total Pembayaran</div>
                 <div class="font-bold">Rp 100.000.000,00</div>
             </div>
 
-            <button id="btn-back" onclick="redirectToNewPage()"
-                class="px-5 py-2  bg-red-200 hover:bg-rose-500 hover:text-slate-50 flex m-auto rounded-xl border border-rose-600 justify-center items-center">kembali
-                ke
-                menu utama</button>
+            <div class="flex justify-around">
+                <button id="btn-back" onclick="redirectToNewPage()"
+                    class="px-5 py-2 min-[500px]:text-base text-[10px] p-3 rounded shadow bg-rose-500 hover:bg-red-300 text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">kembali
+                    ke
+                    menu utama</button>
+                <button id="btn-confirm" onclick="redirectToPageConfirm()"
+                    class="px-5 py-2   min-[500px]:text-base text-[10px] p-3 rounded shadow bg-red-200 hover:bg-[#005461] hover:text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">Konfirmasi
+                    Pesanan</button>
+            </div>
         </section>
     </main>
     <!-- end of content -->

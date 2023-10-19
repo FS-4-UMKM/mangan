@@ -22,7 +22,7 @@ btnBatal.addEventListener("click", function () {
 });
 
 function redirectToNewPage() {
-    window.location.href = 'https://www.google.com/';
+    window.location.href = '/pages/galang-payment/payment.html';
 }
 
 console.log(redirectToNewPage);
