@@ -1,3 +1,5 @@
+<html>
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -5,6 +7,10 @@
   <title>Mangan - Pemesanan Katering Online</title>
   <!-- icons -->
   <link rel="shortcut icon" href="assets/icons/logo/logo-icon-mangan.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <!-- Page Style -->
   <link rel="stylesheet" href="css/index.css" />
@@ -18,11 +24,7 @@
 <body>
   <header id="header-navbar">
     <nav>
-      <img
-        id="header-logo"
-        src="assets/images/Logo-Mangan.png"
-        alt="hero-page-img"
-      />
+      <img id="header-logo" src="assets/images/Logo-Mangan.png" alt="hero-page-img" />
       <ul id="nav-item">
         <li><a href="#hero-section">Home</a></li>
         <li><a href="#about-section">Tentang Kami</a></li>
@@ -31,16 +33,14 @@
       </ul>
     </nav>
     <div id="header-masuk-daftar">
-      <a href="pages/firman-register/register.html" class="btn-daftar"
-        >Daftar</a
-      >
+      <a href="pages/firman-register/register.html" class="btn-daftar">Daftar</a>
       <a href="pages/firman-login/login.html" class="btn-masuk">Masuk</a>
     </div>
   </header>
 
   <section id="hero-section">
     <div id="cont-hero-img">
-      <img src="https://i.imgur.com/Nqj1kJY.jpg" alt="" />
+      <img src="assets/images/hero.png" alt="" />
       <div class="hero-img-text">
         <h1>Cari Katering Mudah & Cepat</h1>
         <p>Jelajahi berbagai macam katering</p>
@@ -55,11 +55,7 @@
         </p>
       </div>
       <div class="hero-cta-input">
-        <input
-          type="text"
-          class="cta-input"
-          placeholder="Masukan nama kota anda"
-        />
+        <input type="text" class="cta-input" placeholder="Masukan nama kota anda" />
         <input type="button" class="cta-button" value="Jelajahi" />
       </div>
     </div>
@@ -71,7 +67,7 @@
     </header>
     <div class="content-about">
       <div>
-        <img src="https://i.imgur.com/bSo5CQj.png" alt="" />
+        <img src="assets/images/mangan-white.png" alt="" />
       </div>
       <p id="description" class="text-about">
         Selamat datang di Mangan, penyedia layanan catering online. Kami
@@ -91,10 +87,10 @@
       <h1>Kemudahan Pemesanan</h1>
     </header>
     <div class="cont-hows">
-      <a href="" class="content-hows">
+      <div href="" class="content-hows">
         <i class="fa-solid fa-map-location-dot" style="color: #de283b"></i>
         <p class="desc-hows">Pilih Kota</p>
-      </a>
+      </div>
       <div class="content-hows">
         <i class="fa-solid fa-utensils" style="color: #de283b"></i>
         <p class="desc-hows">Pilih Katering</p>
@@ -117,7 +113,7 @@
     <div class="product-list">
       <div class="cont-product">
         <div class="img-product">
-          <img src="https://imgur.com/s8RT0px.jpg" alt="" width="150" />
+          <img src="assets/images/dummy-product/menu-1.jpg" alt="" width="150" />
         </div>
         <div class="product-info">
           <div class="info-desc">
@@ -146,7 +142,7 @@
       </div>
       <div class="cont-product">
         <div class="img-product">
-          <img src="https://imgur.com/Q7sv8a7.jpg" alt="" width="150" />
+          <img src="assets/images/dummy-product/menu-2.jpg" alt="" width="150" />
         </div>
         <div class="product-info">
           <div class="info-desc">
@@ -175,7 +171,7 @@
       </div>
       <div class="cont-product">
         <div class="img-product">
-          <img src="https://imgur.com/EMDp0LK.jpg" alt="" width="150" />
+          <img src="assets/images/dummy-product/menu-3.jpg" alt="" width="150" />
         </div>
         <div class="product-info">
           <div class="info-desc">
@@ -204,7 +200,7 @@
       </div>
       <div class="cont-product">
         <div class="img-product">
-          <img src="https://imgur.com/BQ3B7bS.jpg" alt="" width="150" />
+          <img src="assets/images/dummy-product/menu-4.jpg" alt="" width="150" />
         </div>
         <div class="product-info">
           <div class="info-desc">
@@ -233,7 +229,7 @@
       </div>
       <div class="cont-product">
         <div class="img-product">
-          <img src="https://imgur.com/Dhx7ec1.jpg" alt="" width="150" />
+          <img src="assets/images/dummy-product/menu-5.jpg" alt="" width="150" />
         </div>
         <div class="product-info">
           <div class="info-desc">
@@ -261,9 +257,10 @@
         </div>
       </div>
     </div>
-    <button class="btn" id="btn-more-product" type="button">
+    <a style="text-decoration: none;" href="pages/galang-list-produk/list-produk.html" class="btn" id="btn-more-product"
+      type="button">
       Lihat lebih banyak
-    </button>
+    </a>
   </section>
   <hr />
 
@@ -277,52 +274,26 @@
           Bergabung dengan kami dan temukan pelanggan anda secara lebih luas.
         </p>
         <form id="form">
-          <input
-            class="input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Masukan nama"
-          />
-          <input
-            class="input"
-            type="text"
-            name="city"
-            id="city"
-            placeholder="Masukan kota"
-          />
-          <input
-            class="input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Masukan email"
-          />
-          <input
-            class="input"
-            type="number"
-            name="zip-code"
-            id="zip-code"
-            placeholder="Masukan kode pos"
-          />
+          <input class="input" type="text" name="name" id="name" placeholder="Masukan nama" />
+          <input class="input" type="text" name="city" id="city" placeholder="Masukan kota" />
+          <input class="input" type="email" name="email" id="email" placeholder="Masukan email" />
+          <input class="input" type="number" name="zip-code" id="zip-code" placeholder="Masukan kode pos" />
           <input type="checkbox" name="status" id="status" />
-          <label for="status" id="check"
-            >Dengan ini saya menyatakan data yang diisi pada form ini adalah
-            benar dan telah sesuai.</label
-          >
+          <label for="status" id="check">Dengan ini saya menyatakan data yang diisi pada form ini adalah
+            benar dan telah sesuai.</label>
           <button class="btn" type="submit" id="submit-form">Submit</button>
           <div id="warning">Warning!</div>
         </form>
       </div>
       <div class="img-joinus">
-        <img src="https://i.imgur.com/h5V5C6c.jpgg" alt="" />
+        <img src="assets/images/joinus.png" alt="" />
       </div>
     </div>
   </section>
 
   <footer id="footer">
     <div class="desc-footer">
-      <img src="https://i.imgur.com/bSo5CQj.png" alt="" width="200" />
+      <img src="assets/images/mangan-white.png"" width=" 200" />
       <h1>
         Temukan katering sesuai dengan preferensi anda dengan mudah dan cepat di
         “ManGan”.
@@ -353,10 +324,7 @@
       </div>
       <a id="link" href="https://skilvul.com">
         <p>Learing partner</p>
-        <img
-          src="https://skilvul.com/static/skilvul-logo-white.svg"
-          alt="Skilvul"
-        />
+        <img src="https://skilvul.com/static/skilvul-logo-white.svg" alt="Skilvul" />
       </a>
     </div>
     <div class="copyright">
@@ -364,32 +332,6 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
-  =======
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Mangan - Pemesanan Katering Online</title>
-      <!-- icons -->
-      <link rel="shortcut icon" href="assets/icons/logo/logo-icon-mangan.svg" />
-
-      <!-- Page Style -->
-      <link rel="stylesheet" href="css/index.css" />
-      <!-- Fonts -->
-      <link rel="stylesheet" href="css/fonts.css" />
-
-      <!-- Page Script -->
-      <script src="js/index.js" defer></script>
-    </head>
-    <body>
-      <header></header>
-
-      <main></main>
-
-      <footer></footer>
-      >>>>>>> dev
-    </body>
-  </html>
 </body>
+
+</html>
