@@ -122,8 +122,7 @@
         <div id="container" class="mt-9 md:flex gap-20">
             <!-- form untuk detail pembayaran -->
             <section id="detail-form" class="flex-column ">
-                <form action="/checkout" method="post" class="flex-column ">
-
+                <form id="checkout-form" action="/pages/galang-payment/payment.html" method="get" class="flex-column ">
                     <!-- form pertama -->
                     <div id="first-form" class="md:flex md:items-center gap-10 ">
                         <div id="name">
@@ -131,8 +130,8 @@
                             <div id="form-name"
                                 class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
                                 <i class="fa-solid fa-user text-[#DE283B]"></i>
-                                <input type="text" name="username" id="input-name" class="w-full mr-2 outline-none"
-                                    placeholder="masukan nama penerima" value="">
+                                <input type="text" name="name" id="input-name" class="w-full mr-2 outline-none"
+                                    placeholder="masukan nama penerima" required>
                             </div>
                         </div>
 
@@ -141,7 +140,7 @@
                             <div id="form-porsi"
                                 class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
                                 <i class="fa-solid fa-bowl-food text-[#DE283B]"></i>
-                                <input type="text" name="porsi" id="input-porsi" class="w-full mr-2 outline-none"
+                                <input type="number" name="porsi" id="input-porsi" class="w-full mr-2 outline-none"
                                     placeholder="Masukan jumlah porsi" value="">
                             </div>
                         </div>
@@ -165,7 +164,7 @@
                                 class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
                                 <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
                                 <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
-                                    placeholder="Pilih pembayaran" value="">
+                                    placeholder="Pilih pembayaran">
                             </div>
                         </div>
                     </div>
@@ -177,18 +176,40 @@
                             <div id="form-address"
                                 class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
                                 <input type="text" name="address" id="input-address" class="w-full mr-2 outline-none"
-                                    placeholder="Alamat Lengkap" value="">
+                                    placeholder="Alamat Lengkap">
                             </div>
                         </div>
 
-                        <div id="note">
-                            <label for="note">Catatan</label><br>
-                            <div id="form-note"
-                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2 ">
-                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
-                                    placeholder="Tambahkan catatan jika perlu" value="">
+                        <div id="addres">
+                            <label for="addres">Catatan</label><br>
+                            <div id="form-address"
+                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
+                                <input type="text" name="addres" id="input-address" class="w-full mr-2 outline-none"
+                                    placeholder="Alamat Lengkap">
                             </div>
                         </div>
+
+                    </div>
+                    <div id="modal"
+                        class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed hidden shadow-2xl rounded-xl p-3 bg-white ">
+                        <div id="modal-header" class="mb-5">
+                            <h1 class="font-bold text-[#DE283B]">Konfirmasi</h1>
+                        </div>
+                        <div id="modal-body">
+                            <h1 class="font-bold mb-3">Apakah anda yakin ingin melakukan checkout?</h1>
+                            <p class="text-[#DE283B]">Pastikan data yang diinputkan benar dan pastikan pesanan yang anda
+                                pilih
+                                sesuai. Selanjutnya anda
+                                akan diarahkan untuk pembayaran.</p>
+                        </div>
+                        <div class="flex gap-5 justify-center mt-5 items-end">
+                            <button id="btn-batal"
+                                class="shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
+                            <button type="submit" id="btn-agree"
+                                class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white"
+                                onclick="redirectToNewPage()">Checkout</button>
+                        </div>
+
                     </div>
                 </form>
             </section>
@@ -216,32 +237,17 @@
                             <li id="list-item-pesanan">Kerupuk</li>
                         </ul>
                         <p id="harga" class="font-bold">Rp.20,000/porsi</p>
-                        <button id="btn-checkout"
+                        <button type="submit" onclick="kirimData()" id="btn-checkout"
                             class="md:w-[180px] h-[46px] px-8 py-2 mt-4 bg-rose-600 hover:bg-rose-900 rounded-xl justify-center items-center text-white">Checkout</button>
+
                     </div>
+
                 </div>
             </section>
             <!-- detail produk -->
         </div>
 
-        <div id="modal"
-            class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed hidden shadow-2xl rounded-xl p-3 bg-white ">
-            <div id="modal-header" class="mb-5">
-                <h1 class="font-bold text-[#DE283B]">Konfirmasi</h1>
-            </div>
-            <div id="modal-body">
-                <h1 class="font-bold mb-3">Apakah anda yakin ingin melakukan checkout?</h1>
-                <p class="text-[#DE283B]">Pastikan data yang diinputkan benar dan pastikan pesanan yang anda pilih
-                    sesuai. Selanjutnya anda
-                    akan diarahkan untuk pembayaran.</p>
-            </div>
-            <div class="flex gap-5 justify-center mt-5 items-end">
-                <button id="btn-batal" class="shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
-                <button id="btn-agree" class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white"
-                    onclick="redirectToNewPage()">Checkout</button>
-            </div>
 
-        </div>
     </main>
 
 
