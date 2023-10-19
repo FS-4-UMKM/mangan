@@ -1,285 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mangan - List Produk</title>
-    <!-- FavIcon -->
-    <link rel="shortcut icon" href="/assets/icons/logo/logo-icon-mangan.svg" />
 
-    <!-- Per Link Link ngan -->
-    <!-- ===== File styling Main Content -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- ===== File styling Header & Footer -->
-    <link rel="stylesheet" href="/css/header-footer.css" />
-    <!-- ===== CDN Tailwind  -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ===== CDN Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- ===== File Script JS -->
-    <script src="script.js" defer></script>
-    <!-- ===== File Script Header footer -->
-    <script src="/js/header-footer.js" defer></script>
-  </head>
-  <body>
-    <!-- start header -->
-    <header id="header" class="">
-      <nav
-        id="header-nav"
-        class="flex justify-between items-center bg-[#FFF4F4] px-10 py-4"
-      >
-        <div
-          class="w-full md:flex md:justify-between lg:gap-20 lg:justify-normal"
-        >
-          <!-- start logo -->
-          <img
-            src="/assets/images/Logo-Mangan.png"
-            alt=""
-            id="img-nav"
-            class="w-28 h-6"
-          />
-          <!-- end logo -->
-          <!-- list navigasi -->
-          <ul
-            id="list-nav"
-            class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold"
-          >
-            <li
-              id="list-item"
-              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer"
-            >
-              <a href="#">Home</a>
-            </li>
-            <li
-              id="list-item"
-              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer"
-            >
-              <a href="#">Tentang Kami</a>
-            </li>
-            <li
-              id="list-item"
-              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer"
-            >
-              <a href="#">Paket Katering</a>
-            </li>
-            <li
-              id="list-item"
-              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer"
-            >
-              <a href="#">Bergabung</a>
-            </li>
-            <!-- Login Register -->
-            <li class="md:hidden flex justify-end gap-5 py-2 pl-2 mt-4">
-              <a class="py-1 text-[#DE283B] hover:text-[#de283abf]" href=""
-                >Daftar</a
-              >
-              <a
-                class="py-1 px-3 bg-[#DE283B] rounded text-white font-normal hover:bg-[#de283abf]"
-                href=""
-                >Masuk</a
-              >
-            </li>
-          </ul>
-          <!-- end of list navigasi -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Mangan - List Produk</title>
+  <!-- FavIcon -->
+  <link rel="shortcut icon"
+        href="/assets/icons/logo/logo-icon-mangan.svg" />
+
+  <!-- Per Link Link ngan -->
+  <!-- ===== File styling Main Content -->
+  <link rel="stylesheet"
+        href="list-product.css" />
+  <!-- ===== File styling Header & Footer -->
+  <link rel="stylesheet"
+        href="/css/header-footer.css" />
+  <!-- ===== CDN Tailwind  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ===== CDN Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <!-- ===== File Script JS -->
+  <script src="list-product.js"
+          defer></script>
+  <!-- ===== File Script Header footer -->
+  <script src="/js/header-footer.js"
+          defer></script>
+</head>
+
+<body>
+  <!-- start header -->
+  <header id="header"
+          class="">
+    <nav id="header-nav"
+         class="flex justify-between items-center bg-[#FFF4F4] px-10 py-4">
+      <div class="w-full md:flex md:justify-between lg:gap-20 lg:justify-normal">
+        <!-- start logo -->
+        <img src="/assets/images/Logo-Mangan.png"
+             alt=""
+             id="img-nav"
+             class="w-28 h-6" />
+        <!-- end logo -->
+        <!-- list navigasi -->
+        <ul id="list-nav"
+            class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+          <li id="list-item"
+              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+            <a href="#">Home</a>
+          </li>
+          <li id="list-item"
+              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+            <a href="#">Tentang Kami</a>
+          </li>
+          <li id="list-item"
+              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+            <a href="#">Paket Katering</a>
+          </li>
+          <li id="list-item"
+              class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+            <a href="#">Bergabung</a>
+          </li>
+          <!-- Login Register -->
+          <li class="md:hidden flex justify-end gap-5 py-2 pl-2 mt-4">
+            <a class="py-1 text-[#DE283B] hover:text-[#de283abf]"
+               href="">Daftar</a>
+            <a class="py-1 px-3 bg-[#DE283B] rounded text-white font-normal hover:bg-[#de283abf]"
+               href="">Masuk</a>
+          </li>
+        </ul>
+        <!-- end of list navigasi -->
+      </div>
+
+      <!-- Button Login Register -->
+      <div id="login-register"
+           class="hidden md:hidden gap-2 ml-2">
+        <a class="bg-transparent px-4 py-1 text-[#de283b] font-semibold rounded hover:text-opacity-60"
+           href="">Daftar</a>
+        <a class="bg-[#De283b] px-4 py-1 text-white font-medium rounded hover:bg-opacity-80"
+           href="">Masuk</a>
+      </div>
+
+      <!-- Search & Avatar -->
+      <!-- ini aktif ketika user sudah login -->
+      <div id="search-avatar"
+           class="flex gap-5 items-center">
+        <div id="nav-search"
+             class="hidden xl:w-80 h-8 xl:flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+          <i class="fa fa-search ml-2 text-[#DE283B] cursor-pointer"
+             aria-hidden="true"></i>
+          <input class="search-input w-full outline-none"
+                 type="search"
+                 name="search"
+                 id="search-input"
+                 placeholder="Cari katering..." />
         </div>
-
-        <!-- Button Login Register -->
-        <div id="login-register" class="hidden md:flex gap-2 ml-2">
-          <a
-            class="bg-transparent px-4 py-1 text-[#de283b] font-semibold rounded hover:text-opacity-60"
-            href=""
-            >Daftar</a
-          >
-          <a
-            class="bg-[#De283b] px-4 py-1 text-white font-medium rounded hover:bg-opacity-80"
-            href=""
-            >Masuk</a
-          >
-        </div>
-
-        <!-- Search & Avatar -->
-        <!-- ini aktif ketika user sudah login -->
-        <div id="search-avatar" class="hidden gap-5 items-center">
-          <div
-            id="nav-search"
-            class="hidden xl:w-80 h-8 xl:flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4"
-          >
-            <i
-              class="fa fa-search ml-2 text-[#DE283B] cursor-pointer"
-              aria-hidden="true"
-            ></i>
-            <input
-              class="search-input w-full outline-none"
-              type="search"
-              name="search"
-              id="search-input"
-              placeholder="Cari katering..."
-            />
+        <!-- Search Mobile View -->
+        <i id="search-icon"
+           class="block xl:hidden text-[#DE283B] rounded-full cursor-pointer p-2 mr-1 md:ml-9 hover:bg-[#de283a3d] fa fa-search"
+           aria-hidden="true"></i>
+        <div id="search-bar"
+             class="hidden absolute px-7 py-3 w-full left-0 bg-white">
+          <i id="close-search"
+             class="fa-solid fa-arrow-left fa-lg text-[#de283b] my-auto pr-4 py-4 cursor-pointer rounded-md active:bg-[#de283a3d]"></i>
+          <div id="nav-search"
+               class="flex w-full h-8 items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+            <i class="fa fa-search ml-2 text-[#DE283B]"
+               aria-hidden="true"></i>
+            <input class="search-input w-full outline-none"
+                   type="search"
+                   name="search"
+                   id="search-input"
+                   placeholder="Cari katering..." />
+            <i id="enter-search"
+               class="fa fa-arrow-right ml-2 text-white p-2 bg-[#DE283B] rounded-r-sm hover:bg-opacity-90 cursor-pointer"
+               aria-hidden="true"></i>
           </div>
-          <!-- Search Mobile View -->
-          <i
-            id="search-icon"
-            class="block xl:hidden text-[#DE283B] rounded-full cursor-pointer p-2 mr-1 md:ml-9 hover:bg-[#de283a3d] fa fa-search"
-            aria-hidden="true"
-          ></i>
-          <div
-            id="search-bar"
-            class="hidden absolute px-7 py-3 w-full left-0 bg-white"
-          >
-            <i
-              id="close-search"
-              class="fa-solid fa-arrow-left fa-lg text-[#de283b] my-auto pr-4 py-4 cursor-pointer rounded-md active:bg-[#de283a3d]"
-            ></i>
-            <div
-              id="nav-search"
-              class="flex w-full h-8 items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4"
-            >
-              <i
-                class="fa fa-search ml-2 text-[#DE283B]"
-                aria-hidden="true"
-              ></i>
-              <input
-                class="search-input w-full outline-none"
-                type="search"
-                name="search"
-                id="search-input"
-                placeholder="Cari katering..."
-              />
-              <i
-                id="enter-search"
-                class="fa fa-arrow-right ml-2 text-white p-2 bg-[#DE283B] rounded-r-sm hover:bg-opacity-90 cursor-pointer"
-                aria-hidden="true"
-              ></i>
+        </div>
+
+        <!-- avatar image -->
+        <div id="user-avatar-nav"
+             class="w-10 aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer"></div>
+      </div>
+
+      <!-- Hamburger Bar Menu -->
+      <div class="ham-bar block md:hidden ml-8">
+        <input id="checkbox2"
+               type="checkbox" />
+        <label class="toggle toggle2"
+               for="checkbox2">
+          <div id="bar4"
+               class="bars"></div>
+          <div id="bar5"
+               class="bars"></div>
+          <div id="bar6"
+               class="bars"></div>
+        </label>
+      </div>
+    </nav>
+  </header>
+  <!-- end header -->
+
+  <!-- start main content -->
+  <main class="w-full">
+    <!-- Page Image -->
+    <div id="page-graphic"
+         class="hidden md:block md:h-72 w-full lg:h-96 bg-[url('/assets/images/katering-graphic.jpg')] bg-cover bg-center">
+      <div class="flex bg-black bg-opacity-50 justify-center items-center w-full h-full">
+        <h1 class="h-fit text-3xl font-bold text-white">Paket Katering</h1>
+      </div>
+    </div>
+
+    <!-- Filter section -->
+    <section class="w-full md:flex gap-3 items-center p-7 lg:px-16">
+      <!-- Icon filter -->
+      <div class="flex gap-2 items-center">
+        <i class="fa-solid fa-filter fa-lg"
+           style="color: #de283b"></i>
+        <span class="font-semibold text-[#de283b]">Filter</span>
+      </div>
+      <!-- Dropdown Filter -->
+      <div class="flex w-full items-center gap-4 lg:mx-24 relative sm:static">
+        <!-- Dropdown Kota -->
+        <div class="w-1/2 max-w-full relative">
+          <span class="hidden">Pilih Kota</span>
+          <!-- dropdown btn -->
+          <div id="dropdown-kota"
+               onclick="showKota()"
+               class="flex w-full h-8 justify-between items-center px-3 mt-2 md:mt-0 border-solid border-[#de283b] border-[1.5px] rounded bg-white cursor-pointer select-none hover:bg-slate-100 active:bg-slate-300">
+            <span id="selected-kota"
+                  class="text-[#de283b]">Pilih Kota</span>
+            <i id="down-icon-kota"
+               class="fa-solid fa-sort-down pb-2"
+               style="color: #de283b"></i>
+          </div>
+          <!-- dropdown contents -->
+          <div id="kota-contents"
+               class="hidden bg-white shadow w-full rounded mt-1 absolute z-[51]">
+            <div id="jakarta"
+                 class="items-kota text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Jakarta</div>
+            <div id="bogor"
+                 class="items-kota text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Bogor</div>
+            <div id="depok"
+                 class="items-kota text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Depok</div>
+            <div id="tangerang"
+                 class="items-kota text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Tangerang</div>
+            <div id="bekasi"
+                 class="items-kota text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Bekasi</div>
+          </div>
+        </div>
+        <!-- Dropdown Kategori -->
+        <div class="w-1/2 max-w-full relative">
+          <span class="hidden">Pilih Kategori</span>
+          <!-- dropdown btn -->
+          <div id="dropdown-ketegori"
+               onclick="showKategori()"
+               class="flex w-full h-8 justify-between items-center px-3 mt-2 md:mt-0 border-solid border-[#de283b] border-[1.5px] rounded bg-white cursor-pointer select-none hover:bg-slate-100 active:bg-slate-300">
+            <span id="selected-kategori"
+                  class="text-[#de283b]">Pilih Kategori</span>
+            <i id="down-icon-kategori"
+               class="fa-solid fa-sort-down pb-2"
+               style="color: #de283b"></i>
+          </div>
+          <!-- dropdown contents -->
+          <div id="kategori-contents"
+               class="hidden bg-white shadow w-full rounded mt-1 absolute right-0 z-50">
+            <div id="box"
+                 class="items-kategori text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Box</div>
+            <div id="prasmanan"
+                 class="items-kategori text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Prasmanan</div>
+            <div id="tumpeng"
+                 class="items-kategori text-[#de283b] px-3 py-2 cursor-pointer hover:bg-slate-200 select-none">Tumpeng</div>
+          </div>
+        </div>
+        <!-- button filter -->
+        <button id="btn-filter"
+                class="font-bold underline sm:font-normal sm:no-underline bg-white sm:border-solid sm:border-[1.5px] sm:border-[#de283b] text-[#de283b] mt-2 md:mt-0 px-2 py-0 absolute right-0 mb-20 sm:mb-0 sm:right-auto sm:static rounded hover:bg-slate-100 active:bg-slate-300"
+                type="button">Terapkan</button>
+      </div>
+
+    </section>
+    <hr class="border-[#de283a42] mx-7">
+    <!-- Product List -->
+    <section class="w-full p-7">
+      <!-- grid container -->
+      <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 lg:px-10 p-0">
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- avatar image -->
-          <div
-            id="user-avatar-nav"
-            class="w-10 aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer"
-          ></div>
         </div>
-
-        <!-- Hamburger Bar Menu -->
-        <div class="ham-bar block md:hidden ml-8">
-          <input id="checkbox2" type="checkbox" />
-          <label class="toggle toggle2" for="checkbox2">
-            <div id="bar4" class="bars"></div>
-            <div id="bar5" class="bars"></div>
-            <div id="bar6" class="bars"></div>
-          </label>
-        </div>
-      </nav>
-    </header>
-    <!-- end header -->
-
-    <!-- start main content -->
-    <main class="w-full h-[720px]">
-      <section></section>
-      <section></section>
-    </main>
-    <!-- end maint content -->
-
-    <!-- start footer -->
-    <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
-      <!-- start footer content -->
-      <div id="footer-content" class="sm:flex sm:justify-between sm:gap-5">
-        <!-- tagline content -->
-        <div id="footer-content--tagline" class="sm:w-1/2 w-full">
-          <!-- logo -->
-          <img
-            class="w-44"
-            src="/assets/icons/logo/logo-mangan-white.svg"
-            alt=""
-          />
-          <!-- tagline -->
-          <h1 class="font-semibold text-white sm:my-4 my-2 mt-6 sm:mt-4">
-            Temukan katering sesuai dengan preferensi anda dengan mudah dan
-            cepat di “ManGan”.
-          </h1>
-          <!-- Email -->
-          <h3 class="font-medium text-white">Email : contact@mangan.com</h3>
-        </div>
-
-        <!-- link link -->
-        <div
-          id="footer-content--link"
-          class="flex sm:gap-8 mt-6 justify-between"
-        >
-          <div id="footer-layanan" class="font-semibold w-32">
-            <header class="mb-4 text-white">Layanan Kami</header>
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Tentang Kami</a
-            >
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Paket Katering</a
-            >
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Bergabung</a
-            >
-          </div>
-          <div id="footer-social" class="font-semibold w-32">
-            <header class="mb-4 text-white">Social</header>
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Facebook</a
-            >
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Instagram</a
-            >
-            <a
-              href="#"
-              class="text-white font-normal block my-2 hover:font-semibold focus:font-normal"
-              >Twitter X</a
-            >
-          </div>
-          <div
-            id="footer-partner"
-            class="sm:font-medium text-white my-auto text-xs hidden sm:block"
-          >
-            <header>Learning Partner</header>
-            <img
-              class="sm:w-40 w-32"
-              src="https://skilvul.com/static/skilvul-logo-white.svg"
-              alt="skilvul"
-            />
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          id="footer-partner"
-          class="sm:font-medium text-white my-auto text-xs sm:hidden mt-4"
-        >
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-h-full p-2 aspect-[3/4] bg-white border-solid border-[1.5px] border-[#de283b] shadow rounded transition-all hover:-translate-y-1 active:translate-y-0">
+          <div class="w-auto aspect-square rounded-[4px] bg-[url('/assets/images/card-image.jpg')] bg-cover"></div>
+          <div class="keterangan">
+            <div class="main-info mt-1">
+              <h1 class="font-semibold text-[#de283b] text-ellipsis overflow-hidden whitespace-nowrap">Nasi Box Paket Ayam</h1>
+              <h3 class="text-sm">Rp20.000 - Rp35.000</h3>
+              <h5 class="text-xs">4 Menu</h5>
+            </div>
+            <div class="second-info mt-1">
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"
+                   style="color: #de283b;"></i>
+                <p class="text-sm text-[#de293b]">4.2/5.0</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs">20 Review</p>
+                <div class="flex items-center gap-1">
+                  <p class="text-xs">Jakarta</p>
+                  <i class="fa-solid fa-location-dot fa-xs"
+                     style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- end maint content -->
+
+  <!-- start footer -->
+  <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
+    <!-- start footer content -->
+    <div id="footer-content"
+         class="sm:flex sm:justify-between sm:gap-5">
+      <!-- tagline content -->
+      <div id="footer-content--tagline"
+           class="sm:w-1/2 w-full">
+        <!-- logo -->
+        <img class="w-44"
+             src="/assets/icons/logo/logo-mangan-white.svg"
+             alt="" />
+        <!-- tagline -->
+        <h1 class="font-semibold text-white sm:my-4 my-2 mt-6 sm:mt-4">
+          Temukan katering sesuai dengan preferensi anda dengan mudah dan
+          cepat di “ManGan”.
+        </h1>
+        <!-- Email -->
+        <h3 class="font-medium text-white">Email : contact@mangan.com</h3>
+      </div>
+
+      <!-- link link -->
+      <div id="footer-content--link"
+           class="flex sm:gap-3 md:gap-5 mt-6 justify-between">
+        <div id="footer-layanan"
+             class="font-semibold w-32">
+          <header class="mb-4 text-white">Layanan Kami</header>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Tentang Kami</a>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Paket Katering</a>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Bergabung</a>
+        </div>
+        <div id="footer-social"
+             class="font-semibold w-32">
+          <header class="mb-4 text-white">Social</header>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Facebook</a>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Instagram</a>
+          <a href="#"
+             class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Twitter X</a>
+        </div>
+        <div id="footer-partner"
+             class="sm:font-medium text-white my-auto text-xs hidden sm:block">
           <header>Learning Partner</header>
-          <img
-            class="sm:w-40 w-32"
-            src="https://skilvul.com/static/skilvul-logo-white.svg"
-            alt="skilvul"
-          />
+          <img class="lg:w-40 sm:w-24 w-30"
+               src="https://skilvul.com/static/skilvul-logo-white.svg"
+               alt="skilvul" />
         </div>
       </div>
-      <!-- end footer content -->
-
-      <div id="footer-copyright" class="">
-        <p class="text-white text-sm block text-center mt-5">
-          Copyright© 2023 ManGan, ALL RIGHT RESERVED
-        </p>
+      <div id="footer-partner"
+           class="sm:font-medium text-white my-auto text-xs sm:hidden mt-4">
+        <header>Learning Partner</header>
+        <img class="sm:w-40 w-32"
+             src="https://skilvul.com/static/skilvul-logo-white.svg"
+             alt="skilvul" />
       </div>
-    </footer>
-    <!-- end footer -->
-  </body>
+    </div>
+    <!-- end footer content -->
+
+    <div id="footer-copyright"
+         class="">
+      <p class="text-white text-sm block text-center mt-5">
+        Copyright© 2023 ManGan, ALL RIGHT RESERVED
+      </p>
+    </div>
+  </footer>
+  <!-- end footer -->
+</body>
+
 </html>
