@@ -21,5 +21,8 @@
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  background-color: antiquewhite;
+  background-color: rgb(208, 208, 208);
+}
+.splide-thumbnail img {
+  background-color: rgb(208, 208, 208);
 }
