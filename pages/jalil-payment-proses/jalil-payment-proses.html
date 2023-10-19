@@ -33,7 +33,7 @@
                 <!-- end logo -->
                 <!-- list navigasi -->
                 <ul id="list-nav"
-                    class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+                    class="hidden absolute  flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
                     <li id="list-item"
                         class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
                         <a href="#">Home</a>
@@ -101,7 +101,7 @@
             </div>
 
             <!-- Hamburger Bar Menu -->
-            <div class="ham-bar block md:hidden ml-8">
+            <div class="ham-bar block md:hidden ml-8 ">
                 <input id="checkbox2" type="checkbox" />
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
@@ -240,11 +240,11 @@
 
             <div class="flex justify-around">
                 <button id="btn-back" onclick="redirectToNewPage()"
-                    class="px-5 py-2 min-[500px]:text-base text-[10px] p-3 rounded shadow bg-rose-500 hover:bg-red-300 text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">kembali
+                    class="px-5 py-2 transition duration-300 ease-in min-[500px]:text-base text-[10px] p-3 rounded shadow bg-rose-500 hover:bg-red-300 hover:text-black text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">kembali
                     ke
                     menu utama</button>
                 <button id="btn-confirm" onclick="redirectToPageConfirm()"
-                    class="px-5 py-2   min-[500px]:text-base text-[10px] p-3 rounded shadow bg-red-200 hover:bg-[#005461] hover:text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">Konfirmasi
+                    class="px-5 py-2 transition duration-300 ease-out hover:ease-in min-[500px]:text-base text-[10px] p-3 rounded shadow bg-red-200 hover:bg-[#005461] hover:text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">Konfirmasi
                     Pesanan</button>
             </div>
         </section>
