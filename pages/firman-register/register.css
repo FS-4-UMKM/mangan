@@ -16,10 +16,12 @@ body {
 }
 
 .container {
+    background-color: white;
     padding-top: 30px;
     width: 70%;
-    height: 75vh;
+    height: 85vh;
     display: flex;
+    flex-direction: row-reverse;
     max-width: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 15px palevioletred;
@@ -59,9 +61,7 @@ form input {
     background-color: #f9fafb;
 }
 
-.tittle a {
-    text-decoration: none;
-}
+
 
 .tittle {
     display: flex;
@@ -97,7 +97,6 @@ form {
 
 .right img {
     width: 100%;
-    height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -138,6 +137,8 @@ input {
     border-radius: 5px;
     border: 1px solid gray;
 }
+
+
 
 .button-control {
     display: flex;
@@ -184,6 +185,7 @@ button:hover {
 @media (max-width: 880px) {
     .container {
         width: 100%;
+        height: 900px;
         max-width: 750px;
         margin-left: 20px;
         margin-right: 20px;
@@ -192,6 +194,7 @@ button:hover {
     form {
         width: 300px;
         margin: 20px auto;
+
     }
 
     .login {
