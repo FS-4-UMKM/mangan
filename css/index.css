@@ -65,7 +65,7 @@ nav {
     gap: 10px;
 }
 
-#header-masuk-daftar a{
+#header-masuk-daftar a {
     text-decoration: none;
     text-align: center;
     padding-top: 10px;
@@ -272,7 +272,7 @@ nav {
     margin: 4% 3%;
 }
 
-.cont-hows a{
+.cont-hows a {
     text-decoration: none;
 }
 
@@ -338,7 +338,6 @@ hr {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 4px 4px #0000003b;
-    cursor: pointer;
     transition: border .1s ease-in-out;
 
 }
