@@ -19,7 +19,7 @@ body {
     background-color: white;
     padding-top: 30px;
     width: 70%;
-    height: 85vh;
+    height: 800px;
     display: flex;
     flex-direction: row-reverse;
     max-width: 100%;
