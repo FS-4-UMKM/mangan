@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <!-- ===== File styling Header & Footer -->
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <!-- icons -->
+    <link rel="shortcut icon" href="/assets/icons/logo/logo-icon-mangan.svg" />
+
+    <!-- cdn for font ganteng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="checkout.js" defer></script>
+    <!-- ===== File JS Header & Footer -->
+    <script src="/js/header-footer.js" defer></script>
+</head>
+
+<body>
+    <!-- start header -->
+    <header id="header" class="">
+        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-10 py-4">
+            <div class="w-full md:flex md:justify-between lg:gap-20 lg:justify-normal">
+                <!-- start logo -->
+                <img src="/assets/images/Logo-Mangan.png" alt="" id="img-nav" class="w-28 h-6" />
+                <!-- end logo -->
+                <!-- list navigasi -->
+                <ul id="list-nav"
+                    class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Home</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Tentang Kami</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Paket Katering</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Bergabung</a>
+                    </li>
+                    <!-- Login Register -->
+                    <li class="md:hidden flex justify-end gap-5 py-2 pl-2 mt-4">
+                        <a class="py-1 text-[#DE283B] hover:text-[#de283abf]" href="">Daftar</a>
+                        <a class="py-1 px-3 bg-[#DE283B] rounded text-white font-normal hover:bg-[#de283abf]"
+                            href="">Masuk</a>
+                    </li>
+                </ul>
+                <!-- end of list navigasi -->
+            </div>
+
+            <!-- Button Login Register -->
+            <div id="login-register" class="hidden md:flex gap-2 ml-2">
+                <a class="bg-transparent px-4 py-1 text-[#de283b] font-semibold rounded hover:text-opacity-60"
+                    href="">Daftar</a>
+                <a class="bg-[#De283b] px-4 py-1 text-white font-medium rounded hover:bg-opacity-80" href="">Masuk</a>
+            </div>
+
+            <!-- Search & Avatar -->
+            <!-- ini aktif ketika user sudah login -->
+            <div id="search-avatar" class="hidden gap-5 items-center">
+                <div id="nav-search"
+                    class="hidden xl:w-80 h-8 xl:flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                    <i class="fa fa-search ml-2 text-[#DE283B] cursor-pointer" aria-hidden="true"></i>
+                    <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                        placeholder="Cari katering..." />
+                </div>
+                <!-- Search Mobile View -->
+                <i id="search-icon"
+                    class="block xl:hidden text-[#DE283B] rounded-full cursor-pointer p-2 mr-1 md:ml-9 hover:bg-[#de283a3d] fa fa-search"
+                    aria-hidden="true"></i>
+                <div id="search-bar" class="hidden absolute px-7 py-3 w-full left-0 bg-white">
+                    <i id="close-search"
+                        class="fa-solid fa-arrow-left fa-lg text-[#de283b] my-auto pr-4 py-4 cursor-pointer rounded-md active:bg-[#de283a3d]"></i>
+                    <div id="nav-search"
+                        class="flex w-full h-8 items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                        <i class="fa fa-search ml-2 text-[#DE283B]" aria-hidden="true"></i>
+                        <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                            placeholder="Cari katering..." />
+                        <i id="enter-search"
+                            class="fa fa-arrow-right ml-2 text-white p-2 bg-[#DE283B] rounded-r-sm hover:bg-opacity-90 cursor-pointer"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- avatar image -->
+                <div id="user-avatar-nav"
+                    class="w-10 aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Hamburger Bar Menu -->
+            <div class="ham-bar block md:hidden ml-8 ">
+                <input id="checkbox2" type="checkbox" />
+                <label class="toggle toggle2" for="checkbox2">
+                    <div id="bar4" class="bars"></div>
+                    <div id="bar5" class="bars"></div>
+                    <div id="bar6" class="bars"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+
+    <main id="detail-checkout" class="md:mx-9 mx-5 my-5">
+        <div id="title">
+            <h1 class="font-bold text-2xl">Checkout</h1>
+        </div>
+        <div id="container" class="mt-9 md:flex gap-20">
+            <!-- form untuk detail pembayaran -->
+            <section id="detail-form" class="flex-column ">
+                <form id="checkout-form" class="flex-column ">
+                    <!-- form pertama -->
+                    <div id="first-form" class="md:flex md:items-center gap-10 ">
+                        <div id="name">
+                            <label for="name">Nama Penerima</label><br>
+                            <div id="form-name"
+                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-user text-[#DE283B]"></i>
+                                <input type="text" name="name" id="input-name" class="w-full mr-2 outline-none"
+                                    placeholder="masukan nama penerima" required>
+                            </div>
+                        </div>
+
+                        <div id="porsi">
+                            <label for="porsi">Jumlah Porsi</label><br>
+                            <div id="form-porsi"
+                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-bowl-food text-[#DE283B]"></i>
+                                <input type="number" name="porsi" id="input-porsi" class="w-full mr-2 outline-none"
+                                    placeholder="Masukan jumlah porsi" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form pertama -->
+
+                    <!-- form kedua -->
+                    <div id="second-form" class="md:flex items-center gap-10 mt-4">
+                        <div id="date">
+                            <label for="date">Tanggal Acara</label><br>
+                            <div id="form-date"
+                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <input type="date" name="date" id="input-date" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih Tanggal" value="">
+                            </div>
+                        </div>
+
+                        <div id="payment">
+                            <label for="payment">Pilih pembayaran</label><br>
+                            <div id="form-payment"
+                                class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
+                                <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
+                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
+                                    placeholder="Pilih pembayaran">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form kedua -->
+
+                    <div id="extra-note" class="mt-4 ">
+                        <div id="address">
+                            <label for="address">Alamat Lengkap</label><br>
+                            <div id="form-address"
+                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
+                                <input type="text" name="address" id="input-address" class="w-full mr-2 outline-none"
+                                    placeholder="Alamat Lengkap">
+                            </div>
+                        </div>
+
+                        <div id="addres">
+                            <label for="addres">Catatan</label><br>
+                            <div id="form-address"
+                                class="md:w-full h-28 flex items-start gap-2 rounded-lg bg-white p-2 my-2">
+                                <input type="text" name="addres" id="input-note" class="w-full mr-2 outline-none"
+                                    placeholder="Alamat Lengkap">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="modal"
+                        class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed hidden shadow-2xl rounded-xl p-3 bg-white ">
+                        <div id="modal-header" class="mb-5">
+                            <h1 class="font-bold text-[#DE283B]">Konfirmasi</h1>
+                        </div>
+                        <div id="modal-body">
+                            <h1 class="font-bold mb-3">Apakah anda yakin ingin melakukan checkout?</h1>
+                            <p class="text-[#DE283B]">Pastikan data yang diinputkan benar dan pastikan pesanan yang anda
+                                pilih
+                                sesuai. Selanjutnya anda
+                                akan diarahkan untuk pembayaran.</p>
+                        </div>
+                        <div class="flex gap-5 justify-center mt-5 items-end">
+                            <button id="btn-batal"
+                                class=" shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
+                            <button type="submit" id="btn-agree" onclick="redirectToNewPage()"
+                                class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white">Checkout</button>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- form untuk detail pembayaran -->
+
+            <!-- detail produk -->
+            <section id="produk-detail" class="shadow-2xl rounded-xl p-3 md:shadow-none">
+                <h1 class="font-bold">Detail Pesanan</h1>
+                <div id="detail-pesanan" class="flex gap-6 my-2">
+                    <div id="img-pesanan" class=" w-2/4">
+                        <img class="w-full h-auto rounded-[10px]" src="https://via.placeholder.com/192x175" />
+                        <div id="total-price" class="mt-4">
+                            <p id="text-total">total harga</p>
+                            <p id="text-price" class="font-bold">Rp. 1,000,000</p>
+                        </div>
+                    </div>
+                    <div id="deskripsi-pesanan" class="-mt-1 w-2/4">
+                        <h1 class="font-bold">Catering Lezat</h1>
+                        <h3>Paket A</h3>
+                        <ul id="list-pesanan" class="list-disc px-6 text-[15px]">
+                            <li id="list-item-pesanan">nasi</li>
+                            <li id="list-item-pesanan">Cak Kangkung</li>
+                            <li id="list-item-pesanan">Ayam Goreng</li>
+                            <li id="list-item-pesanan">Sambal</li>
+                            <li id="list-item-pesanan">Kerupuk</li>
+                        </ul>
+                        <p id="harga" class="font-bold">Rp.20,000/porsi</p>
+                        <button type="submit" id="btn-checkout"
+                            class="md:w-[180px] h-[46px] px-8 py-2 mt-4 bg-rose-600 hover:bg-rose-900 rounded-xl justify-center items-center text-white">Checkout</button>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- detail produk -->
+        </div>
+
+
+    </main>
+
+
+    <!-- start footer -->
+    <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
+        <!-- start footer content -->
+        <div id="footer-content" class="sm:flex sm:justify-between sm:gap-5">
+            <!-- tagline content -->
+            <div id="footer-content--tagline" class="sm:w-1/2 w-full">
+                <!-- logo -->
+                <img class="w-44" src="/assets/icons/logo/logo-mangan-white.svg" alt="" />
+                <!-- tagline -->
+                <h1 class="font-semibold text-white sm:my-4 my-2 mt-6 sm:mt-4">
+                    Temukan katering sesuai dengan preferensi anda dengan mudah dan
+                    cepat di “ManGan”.
+                </h1>
+                <!-- Email -->
+                <h3 class="font-medium text-white">Email : contact@mangan.com</h3>
+            </div>
+
+            <!-- link link -->
+            <div id="footer-content--link" class="flex sm:gap-8 mt-6 justify-between">
+                <div id="footer-layanan" class="font-semibold w-32">
+                    <header class="mb-4 text-white font-bold">Layanan Kami</header>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Tentang
+                        Kami</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Paket
+                        Katering</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Bergabung</a>
+                </div>
+                <div id="footer-social" class="font-semibold w-32">
+                    <header class="mb-4 text-white font-bold">Social</header>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Facebook</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Instagram</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Twitter
+                        X</a>
+                </div>
+                <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs hidden sm:block">
+                    <header>Learning Partner</header>
+                    <img class="sm:w-40 w-32" src="https://skilvul.com/static/skilvul-logo-white.svg" alt="skilvul" />
+                </div>
+            </div>
+            <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs sm:hidden mt-4">
+                <header>Learning Partner</header>
+                <img class="sm:w-40 w-32" src="https://skilvul.com/static/skilvul-logo-white.svg" alt="skilvul" />
+            </div>
+        </div>
+        <!-- end footer content -->
+
+        <div id="footer-copyright" class="">
+            <p class="text-white text-sm block text-center mt-5">
+                Copyright© 2023 ManGan, ALL RIGHT RESERVED
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+</body>
+
+</html>

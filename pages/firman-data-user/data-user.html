@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangan - Data user</title>
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="/assets/icons/logo/logo-icon-mangan.svg" />
+
+    <!-- Per Link Link ngan -->
+    <!-- ===== File styling Main Content -->
+    <link rel="stylesheet" href="data-user.css" />
+    <!-- ===== File styling Header & Footer -->
+    <link rel="stylesheet" href="../../css/header-footer.css" />
+    <!-- ===== CDN Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ===== CDN Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ===== File Script JS -->
+    <script src="data-user.js" defer></script>
+    <!-- ===== File Script Header footer -->
+    <script src="../../js/header-footer.js" defer></script>
+    <!-- ===== File Styling Loading -->
+    <link rel="stylesheet" href="/css/loading.css">
+</head>
+
+<body>
+
+    <!-- start header -->
+    <header id="header" class="">
+        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-10 py-4">
+            <div class="w-full md:flex md:justify-between lg:gap-20 lg:justify-normal">
+                <!-- start logo -->
+                <img src="/assets/images/Logo-Mangan.png" alt="" id="img-nav" class="w-28 h-6" />
+                <!-- end logo -->
+                <!-- list navigasi -->
+                <ul id="list-nav"
+                    class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow z-[99] right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Home</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Tentang Kami</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Paket Katering</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Bergabung</a>
+                    </li>
+                    <!-- Login Register -->
+                    <li class="md:hidden flex justify-end gap-5 py-2 pl-2 mt-4">
+                        <a class="py-1 text-[#DE283B] hover:text-[#de283abf]" href="">Daftar</a>
+                        <a class="py-1 px-3 bg-[#DE283B] rounded text-white font-normal hover:bg-[#de283abf]"
+                            href="">Masuk</a>
+                    </li>
+                </ul>
+                <!-- end of list navigasi -->
+            </div>
+
+            <!-- Button Login Register -->
+            <div id="login-register" class="hidden md:hidden gap-2 ml-2">
+                <a class="bg-transparent px-4 py-1 text-[#de283b] font-semibold rounded hover:text-opacity-60"
+                    href="">Daftar</a>
+                <a class="bg-[#De283b] px-4 py-1 text-white font-medium rounded hover:bg-opacity-80" href="">Masuk</a>
+            </div>
+
+            <!-- Search & Avatar -->
+            <!-- ini aktif ketika user sudah login -->
+            <div id="search-avatar" class="flex gap-5 items-center">
+                <div id="nav-search"
+                    class="hidden xl:w-80 h-8 xl:flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                    <i class="fa fa-search ml-2 text-[#DE283B] cursor-pointer" aria-hidden="true"></i>
+                    <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                        placeholder="Cari katering..." />
+                </div>
+                <!-- Search Mobile View -->
+                <i id="search-icon"
+                    class="block xl:hidden text-[#DE283B] rounded-full cursor-pointer p-2 mr-1 md:ml-9 hover:bg-[#de283a3d] fa fa-search"
+                    aria-hidden="true"></i>
+                <div id="search-bar" class="hidden absolute px-7 py-3 w-full left-0 bg-white">
+                    <i id="close-search"
+                        class="fa-solid fa-arrow-left fa-lg text-[#de283b] my-auto pr-4 py-4 cursor-pointer rounded-md active:bg-[#de283a3d]"></i>
+                    <div id="nav-search"
+                        class="flex w-full h-8 items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                        <i class="fa fa-search ml-2 text-[#DE283B]" aria-hidden="true"></i>
+                        <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                            placeholder="Cari katering..." />
+                        <i id="enter-search"
+                            class="fa fa-arrow-right ml-2 text-white p-2 bg-[#DE283B] rounded-r-sm hover:bg-opacity-90 cursor-pointer"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- avatar image -->
+                <div id="user-avatar-nav"
+                    class="w-10 aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Hamburger Bar Menu -->
+            <div class="ham-bar block md:hidden ml-8">
+                <input id="checkbox2" type="checkbox" />
+                <label class="toggle toggle2" for="checkbox2">
+                    <div id="bar4" class="bars"></div>
+                    <div id="bar5" class="bars"></div>
+                    <div id="bar6" class="bars"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- start main content -->
+    <main class="w-full">
+        <!-- data user -->
+        <div class="bg-[#FFF4F4] w-[400px] m-8 border-black border-2 rounded-xl">
+            <div
+                class="m-5 w-[30%] aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer">
+            </div>
+            <div class="m-5">
+                <form action="">
+                    <div class="sm:col-span-4 mt-2">
+                        <label for="nama" class="block text-sm font-medium leading-6 text-gray-900">Nama</label>
+                        <div class="mt-2">
+                            <input id="email" name="nama" type="text" value="jawijiwajij"
+                                class="shadow-lg shadow-slate-800 block p-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-4 mt-2">
+                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                        <div class="mt-2">
+                            <input id="email" name="email" type="email" value="jawir@mangan.com"
+                                class="shadow-lg shadow-slate-800 block p-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-4 mt-2">
+                        <label for="nohp" class="block text-sm font-medium leading-6 text-gray-900">No Handphone</label>
+                        <div class="mt-2">
+                            <input id="nohp" name="text" type="text" value="059879846546"
+                                class="shadow-lg shadow-slate-800 block p-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="col-span-full mt-2">
+                        <label for="alamat" class="block text-sm font-medium leading-6 text-gray-900">Alamat</label>
+                        <div class="mt-2">
+                            <textarea id="alamat" name="alamat" rows="3"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3">Jl.in Aja dulu</textarea>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-4 mt-2">
+                        <label for="password" class="block text-sm font-medium leading-6 text-gray-900">No
+                            Handphone</label>
+                        <div class="mt-2">
+                            <input id="password" name="password" type="password" value="059879846546"
+                                class="shadow-lg shadow-slate-800 block p-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <a class="text-red-500" href="">Ubah password</a>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-4 mt-2">
+                        <button type="reset"
+                            class="bg-white text-red-600  shadow-slate-800 shadow-lg rounded-xl  m-3 p-3 text-base">Reset</button>
+                        <button
+                            class="bg-[#005461] rounded-xl shadow-slate-800 shadow-lg   text-white m-3 p-3 text-base">Simpan
+                            perubahan</button>
+                    </div>
+
+                </form>
+            </div>
+            <!-- Filter section -->
+            <hr class="border-[#de283a42] mx-7">
+            <!-- Product List -->
+            <section class="w-full p-7">
+                <!-- grid container -->
+                <div id="container-list"
+                    class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 lg:px-10 p-0">
+
+                </div>
+            </section>
+    </main>
+    <!-- end maint content -->
+
+    <!-- start footer -->
+    <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
+        <!-- start footer content -->
+        <div id="footer-content" class="sm:flex sm:justify-between sm:gap-5">
+            <!-- tagline content -->
+            <div id="footer-content--tagline" class="sm:w-1/2 w-full">
+                <!-- logo -->
+                <img class="w-44" src="/assets/icons/logo/logo-mangan-white.svg" alt="" />
+                <!-- tagline -->
+                <h1 class="font-semibold text-white sm:my-4 my-2 mt-6 sm:mt-4">
+                    Temukan katering sesuai dengan preferensi anda dengan mudah dan
+                    cepat di “ManGan”.
+                </h1>
+                <!-- Email -->
+                <h3 class="font-medium text-white">Email : contact@mangan.com</h3>
+            </div>
+
+            <!-- link link -->
+            <div id="footer-content--link" class="flex sm:gap-3 md:gap-5 mt-6 justify-between">
+                <div id="footer-layanan" class="font-semibold w-32">
+                    <header class="mb-4 text-white">Layanan Kami</header>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Tentang
+                        Kami</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Paket
+                        Katering</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Bergabung</a>
+                </div>
+                <div id="footer-social" class="font-semibold w-32">
+                    <header class="mb-4 text-white">Social</header>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Facebook</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Instagram</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Twitter
+                        X</a>
+                </div>
+                <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs hidden sm:block">
+                    <header>Learning Partner</header>
+                    <img class="lg:w-40 sm:w-24 w-30" src="https://skilvul.com/static/skilvul-logo-white.svg"
+                        alt="skilvul" />
+                </div>
+            </div>
+            <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs sm:hidden mt-4">
+                <header>Learning Partner</header>
+                <img class="sm:w-40 w-32" src="https://skilvul.com/static/skilvul-logo-white.svg" alt="skilvul" />
+            </div>
+        </div>
+        <!-- end footer content -->
+
+        <div id="footer-copyright" class="">
+            <p class="text-white text-sm block text-center mt-5">
+                Copyright© 2023 ManGan, ALL RIGHT RESERVED
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+</body>
+
+</html>

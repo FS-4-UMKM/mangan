@@ -1,12 +1,337 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body></body>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mangan - Pemesanan Katering Online</title>
+  <!-- icons -->
+  <link rel="shortcut icon" href="assets/icons/logo/logo-icon-mangan.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Page Style -->
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- Fonts -->
+  <link rel="stylesheet" href="css/fonts.css" />
+
+  <!-- Page Script -->
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <header id="header-navbar">
+    <nav>
+      <img id="header-logo" src="assets/images/Logo-Mangan.png" alt="hero-page-img" />
+      <ul id="nav-item">
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#about-section">Tentang Kami</a></li>
+        <li><a href="#popular-section">Katering</a></li>
+        <li><a href="#joinus-section">Bergabung</a></li>
+      </ul>
+    </nav>
+    <div id="header-masuk-daftar">
+      <a href="pages/firman-register/register.html" class="btn-daftar">Daftar</a>
+      <a href="pages/firman-login/login.html" class="btn-masuk">Masuk</a>
+    </div>
+  </header>
+
+  <section id="hero-section">
+    <div id="cont-hero-img">
+      <img src="assets/images/hero.png" alt="" />
+      <div class="hero-img-text">
+        <h1>Cari Katering Mudah & Cepat</h1>
+        <p>Jelajahi berbagai macam katering</p>
+      </div>
+    </div>
+    <div id="cont-hero-cta">
+      <div class="hero-cta-text">
+        <h1>Temukan katering terbaik disekitar anda</h1>
+        <p>
+          Eksplor penyedia layanan katering terdekat di wilayah anda dan pilih
+          sesuai dengan preferensi anda
+        </p>
+      </div>
+      <div class="hero-cta-input">
+        <input type="text" class="cta-input" placeholder="Masukan nama kota anda" />
+        <input type="button" class="cta-button" value="Jelajahi" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about-section">
+    <header class="section-header">
+      <h1>Tentang Kami</h1>
+    </header>
+    <div class="content-about">
+      <div>
+        <img src="assets/images/mangan-white.png" alt="" />
+      </div>
+      <p id="description" class="text-about">
+        Selamat datang di Mangan, penyedia layanan catering online. Kami
+        berkomitmen untuk memberikan pengalaman kuliner yang tak terlupakan
+        kepada pelanggan kami. <br />
+        <br />Mangan telah berdiri sejak 2023 dan sejak itu, kami telah melayani
+        ribuan acara khusus dengan penuh dedikasi dan keahlian kami dalam bidang
+        kuliner. Kami memahami bahwa makanan adalah salah satu elemen terpenting
+        dalam setiap perayaan atau acara, dan kami berusaha untuk menjadikan
+        setiap hidangan spesial
+      </p>
+    </div>
+  </section>
+
+  <section id="hows-section">
+    <header class="section-header">
+      <h1>Kemudahan Pemesanan</h1>
+    </header>
+    <div class="cont-hows">
+      <div href="" class="content-hows">
+        <i class="fa-solid fa-map-location-dot" style="color: #de283b"></i>
+        <p class="desc-hows">Pilih Kota</p>
+      </div>
+      <div class="content-hows">
+        <i class="fa-solid fa-utensils" style="color: #de283b"></i>
+        <p class="desc-hows">Pilih Katering</p>
+      </div>
+      <div class="content-hows">
+        <i class="fa-solid fa-money-bill-wave" style="color: #de283b"></i>
+        <p class="desc-hows">Bayar</p>
+      </div>
+      <div class="content-hows">
+        <i class="fa-solid fa-truck-fast" style="color: #de283b"></i>
+        <p class="desc-hows">Dikirim</p>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section id="popular-section">
+    <header class="section-header">
+      <h1>Paket Katering Teratas</h1>
+    </header>
+    <div class="product-list">
+      <div class="cont-product">
+        <div class="img-product">
+          <img src="assets/images/dummy-product/menu-1.jpg" alt="" width="150" />
+        </div>
+        <div class="product-info">
+          <div class="info-desc">
+            <h1 class="desc-judul">Nasi Box pak Gembul</h1>
+            <p class="desc-harga">Rp20.000 - Rp32.000</p>
+            <p class="desc-menu">5 Menu</p>
+          </div>
+          <div class="info-rating">
+            <div class="rating-star">
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #c1c1c1"></i>
+            </div>
+            <p>4.2</p>
+          </div>
+          <div class="info-more">
+            <p>20 Review</p>
+            <div class="location-info">
+              <p>Kota Jakarta</p>
+              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-product">
+        <div class="img-product">
+          <img src="assets/images/dummy-product/menu-2.jpg" alt="" width="150" />
+        </div>
+        <div class="product-info">
+          <div class="info-desc">
+            <h1 class="desc-judul">Paket Nasi Uduk Betawi</h1>
+            <p class="desc-harga">Rp17.000 - Rp25.000</p>
+            <p class="desc-menu">3 Menu</p>
+          </div>
+          <div class="info-rating">
+            <div class="rating-star">
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+            </div>
+            <p>5.0</p>
+          </div>
+          <div class="info-more">
+            <p>10 Review</p>
+            <div class="location-info">
+              <p>Purwokerto</p>
+              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-product">
+        <div class="img-product">
+          <img src="assets/images/dummy-product/menu-3.jpg" alt="" width="150" />
+        </div>
+        <div class="product-info">
+          <div class="info-desc">
+            <h1 class="desc-judul">Paket Sego Pecel Bu Ani</h1>
+            <p class="desc-harga">Rp15.000 - Rp22.000</p>
+            <p class="desc-menu">6 Menu</p>
+          </div>
+          <div class="info-rating">
+            <div class="rating-star">
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #c1c1c1"></i>
+            </div>
+            <p>4.4</p>
+          </div>
+          <div class="info-more">
+            <p>28 Review</p>
+            <div class="location-info">
+              <p>Surabaya</p>
+              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-product">
+        <div class="img-product">
+          <img src="assets/images/dummy-product/menu-4.jpg" alt="" width="150" />
+        </div>
+        <div class="product-info">
+          <div class="info-desc">
+            <h1 class="desc-judul">Paket Prasmanan Rumah bu Ida</h1>
+            <p class="desc-harga">Rp25.000 - Rp35.000</p>
+            <p class="desc-menu">8 Menu</p>
+          </div>
+          <div class="info-rating">
+            <div class="rating-star">
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #c1c1c1"></i>
+            </div>
+            <p>4.0</p>
+          </div>
+          <div class="info-more">
+            <p>40 Review</p>
+            <div class="location-info">
+              <p>Bandung</p>
+              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-product">
+        <div class="img-product">
+          <img src="assets/images/dummy-product/menu-5.jpg" alt="" width="150" />
+        </div>
+        <div class="product-info">
+          <div class="info-desc">
+            <h1 class="desc-judul">Nasi Kuning/Tumpeng bu Irna</h1>
+            <p class="desc-harga">Rp20.000 - Rp32.000</p>
+            <p class="desc-menu">6 Menu</p>
+          </div>
+          <div class="info-rating">
+            <div class="rating-star">
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+              <i class="fa-solid fa-star" style="color: #de283b"></i>
+            </div>
+            <p>5.0</p>
+          </div>
+          <div class="info-more">
+            <p>22 Review</p>
+            <div class="location-info">
+              <p>Yogyakakrta</p>
+              <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a style="text-decoration: none;" href="pages/galang-list-produk/list-produk.html" class="btn" id="btn-more-product"
+      type="button">
+      Lihat lebih banyak
+    </a>
+  </section>
+  <hr />
+
+  <section id="joinus-section">
+    <header class="section-header">
+      <h1>Bergabung Dengan Kami</h1>
+    </header>
+    <div class="content-joinus">
+      <div class="input-data">
+        <p>
+          Bergabung dengan kami dan temukan pelanggan anda secara lebih luas.
+        </p>
+        <form id="form">
+          <input class="input" type="text" name="name" id="name" placeholder="Masukan nama" />
+          <input class="input" type="text" name="city" id="city" placeholder="Masukan kota" />
+          <input class="input" type="email" name="email" id="email" placeholder="Masukan email" />
+          <input class="input" type="number" name="zip-code" id="zip-code" placeholder="Masukan kode pos" />
+          <input type="checkbox" name="status" id="status" />
+          <label for="status" id="check">Dengan ini saya menyatakan data yang diisi pada form ini adalah
+            benar dan telah sesuai.</label>
+          <button class="btn" type="submit" id="submit-form">Submit</button>
+          <div id="warning">Warning!</div>
+        </form>
+      </div>
+      <div class="img-joinus">
+        <img src="assets/images/joinus.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="desc-footer">
+      <img src="assets/images/mangan-white.png"" width=" 200" />
+      <h1>
+        Temukan katering sesuai dengan preferensi anda dengan mudah dan cepat di
+        “ManGan”.
+      </h1>
+      <p>Email : contact@mangan.com</p>
+    </div>
+    <div class="link-footer">
+      <div class="layanan">
+        <h1>Layanan kami</h1>
+        <a href="">About us</a>
+        <a href="">Paket Katering</a>
+        <a href="">Join with us</a>
+      </div>
+      <div class="social">
+        <h1>Social</h1>
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+          <p>Instagram</p>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-facebook"></i>
+          <p>Facebook</p>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-x-twitter"></i>
+          <p>Twitter</p>
+        </a>
+      </div>
+      <a id="link" href="https://skilvul.com">
+        <p>Learing partner</p>
+        <img src="https://skilvul.com/static/skilvul-logo-white.svg" alt="Skilvul" />
+      </a>
+    </div>
+    <div class="copyright">
+      <p>Copyright© 2023 ManGan ALL RIGHT RESERVED</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
 </html>

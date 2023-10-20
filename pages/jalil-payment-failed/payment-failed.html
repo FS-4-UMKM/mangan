@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment failed</title>
+    <link rel="stylesheet" href="checkout.css">
+    <!-- ===== File styling Header & Footer -->
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <!-- icons -->
+    <link rel="shortcut icon" href="/assets/icons/logo/logo-icon-mangan.svg" />
+
+    <!-- cdn for font ganteng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="payment-failed.js" defer></script>
+    <!-- ===== File JS Header & Footer -->
+    <script src="/js/header-footer.js" defer></script>
+</head>
+
+<body>
+    <!-- start header -->
+    <header id="header" class="">
+        <nav id="header-nav" class="flex justify-between items-center bg-[#FFF4F4] px-10 py-4">
+            <div class="w-full md:flex md:justify-between lg:gap-20 lg:justify-normal">
+                <!-- start logo -->
+                <img src="/assets/images/Logo-Mangan.png" alt="" id="img-nav" class="w-28 h-6" />
+                <!-- end logo -->
+                <!-- list navigasi -->
+                <ul id="list-nav"
+                    class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Home</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Tentang Kami</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Paket Katering</a>
+                    </li>
+                    <li id="list-item"
+                        class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
+                        <a href="#">Bergabung</a>
+                    </li>
+                    <!-- Login Register -->
+                    <li class="md:hidden flex justify-end gap-5 py-2 pl-2 mt-4">
+                        <a class="py-1 text-[#DE283B] hover:text-[#de283abf]" href="">Daftar</a>
+                        <a class="py-1 px-3 bg-[#DE283B] rounded text-white font-normal hover:bg-[#de283abf]"
+                            href="">Masuk</a>
+                    </li>
+                </ul>
+                <!-- end of list navigasi -->
+            </div>
+
+            <!-- Button Login Register -->
+            <div id="login-register" class="hidden md:flex gap-2 ml-2">
+                <a class="bg-transparent px-4 py-1 text-[#de283b] font-semibold rounded hover:text-opacity-60"
+                    href="">Daftar</a>
+                <a class="bg-[#De283b] px-4 py-1 text-white font-medium rounded hover:bg-opacity-80" href="">Masuk</a>
+            </div>
+
+            <!-- Search & Avatar -->
+            <!-- ini aktif ketika user sudah login -->
+            <div id="search-avatar" class="hidden gap-5 items-center">
+                <div id="nav-search"
+                    class="hidden xl:w-80 h-8 xl:flex items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                    <i class="fa fa-search ml-2 text-[#DE283B] cursor-pointer" aria-hidden="true"></i>
+                    <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                        placeholder="Cari katering..." />
+                </div>
+                <!-- Search Mobile View -->
+                <i id="search-icon"
+                    class="block xl:hidden text-[#DE283B] rounded-full cursor-pointer p-2 mr-1 md:ml-9 hover:bg-[#de283a3d] fa fa-search"
+                    aria-hidden="true"></i>
+                <div id="search-bar" class="hidden absolute px-7 py-3 w-full left-0 bg-white">
+                    <i id="close-search"
+                        class="fa-solid fa-arrow-left fa-lg text-[#de283b] my-auto pr-4 py-4 cursor-pointer rounded-md active:bg-[#de283a3d]"></i>
+                    <div id="nav-search"
+                        class="flex w-full h-8 items-center gap-2 border-2 rounded-lg border-[#DE283B] bg-white py-4">
+                        <i class="fa fa-search ml-2 text-[#DE283B]" aria-hidden="true"></i>
+                        <input class="search-input w-full outline-none" type="search" name="search" id="search-input"
+                            placeholder="Cari katering..." />
+                        <i id="enter-search"
+                            class="fa fa-arrow-right ml-2 text-white p-2 bg-[#DE283B] rounded-r-sm hover:bg-opacity-90 cursor-pointer"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- avatar image -->
+                <div id="user-avatar-nav"
+                    class="w-10 aspect-square rounded-full bg-[url('/assets/images/avatar.jpg')] bg-cover bg-center cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Hamburger Bar Menu -->
+            <div class="ham-bar block md:hidden ml-8">
+                <input id="checkbox2" type="checkbox" />
+                <label class="toggle toggle2" for="checkbox2">
+                    <div id="bar4" class="bars"></div>
+                    <div id="bar5" class="bars"></div>
+                    <div id="bar6" class="bars"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- start content -->
+    <main id="content" class="m-4 md:flex md:justify-around md:gap-20 flex ">
+        <section id="img-failed" class="flex-row hidden md:block">
+            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Di batalkan
+            </h1>
+            <img src="/assets/images/payment-failed.png" alt="" class="w-[400px] h-auto">
+        </section>
+
+        <section id="detail-failed" class="w-full md:w-1/2 flex-row space-y-4 ">
+            <!-- div untuk Tanggal pesanan -->
+            <div id=" date-number"
+                class="flex w-full text-[10px] min-[500px]:justify-between min-[500px]:text-sm md:justify-around h-auto md:px-7 px-2 py-5 rounded-md gap-5 bg-red-200 shadow ">
+                <div id="date-order-failed">
+                    <p class=" text-[#005461]">Tanggal Pesanan
+                    </p>
+                    <p id="date" class="font-[800]">7 September 2023
+                    </p>
+                </div>
+                <div id="number-order-container">
+                    <p class=" text-[#005461]">Nomor Pesanan
+                    </p>
+                    <p id="number-order" class="font-[800]">P00107092023S1BOX1
+                    </p>
+                </div>
+                <div id="method-payment-container">
+                    <p class=" text-[#005461]">Metode Pembayaran
+                    </p>
+                    <p id="metode-pembayaran" class="font-[800]">QRIS
+                    </p>
+                </div>
+            </div>
+            <!-- div untuk Tanggal pesanan -->
+
+            <!-- div untuk detail pesanan yang di batalkan -->
+            <div id="order-failed-container"
+                class="flex w-full text-[10px] min-[500px]:text-sm min-[500px]:justify-around  h-auto md:px-7 px-2 py-5 rounded-md justify-between bg-red-200 shadow ">
+
+                <!-- gambar dan detail pesanan yang di batalkan -->
+                <div id="">
+                    <img id="img-date-failed"
+                        class="w-20 h-20 md:w-44 md:h-36 my-auto   rounded-[10px] border border-rose-600"
+                        src="https://via.placeholder.com/95x95" />
+                </div>
+                <div id="order-failed">
+                    <h1 id="title-order-failed" class="font-bold text-[#005461]">Paket Nazi Pak Adolf
+                    </h1>
+                    <p id="menu" class="text-[9px] md:text-sm">Menu A
+                    </p>
+                    <p id="price-failed" class="font-[700]">Rp.20.000/porsi</p>
+                </div>
+                <!-- gambar dan detail pesanan yang di batalkan -->
+
+                <!-- list menu yang di batalkan -->
+                <div id="menu-failed">
+                    <p id="isi-menu-failed" class=" text-[#005461] font-[800]">Isi Menu A
+                    </p>
+                    <ul id="list-menu-failed" class="list-disc px-3">
+                        <li id="item-menu-failed">nasi</li>
+                        <li id="item-menu-failed">Oseng Kangkung</li>
+                        <li id="item-menu-failed">Ayam gemes</li>
+                        <li id="item-menu-failed">lalapan</li>
+                        <li id="item-menu-failed">Kerupuk</li>
+                    </ul>
+                </div>
+                <!-- list menu yang di batalkan -->
+            </div>
+            <!-- div untuk detail pesanan yang di batalkan -->
+
+            <!-- infomasi pesanan yang di batalkan -->
+            <div id="info-order-failed"
+                class="flex w-full text-[10px] min-[500px]:text-[14px] justify-between  h-auto gap-3 md:px-7 px-2 py-5 rounded-md bg-red-200 shadow">
+                <!-- keterangan pesanan yang di batalkan -->
+                <div id="Keterangan-failed" class="w-1/3">
+                    <h1 class="font-bold text-[#005461]">Keterangan</h1>
+                    <div class="">
+                        <p class="leading-none mb-[3px] font-bold ">Tgl acara:</p>
+                        <p id="tgl-acara" class="leading-none font-medium text-[#005461]">20 Oktober 2023, 10.00 WIB</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="leading-none mb-[3px] font-bold">Jumlah porsi:</p>
+                        <p id="jumlah-porsi" class="leading-none font-medium text-[#005461]">120</p>
+                    </div>
+                    <div class="py-1">
+                        <p class="leading-none mb-[3px] font-bold">Catatan:</p>
+                        <p id="catatan" class="leading-none font-medium text-[#005461]">Mohon kirim 2 jam sebelum acara
+                            dimulai ya.</p>
+                    </div>
+                </div>
+                <!-- keterangan pesanan yang di batalkan -->
+
+                <!-- pengirim batal -->
+                <div id="pengirim-batal">
+                    <p class="font-bold text-[#005461]">Pengirim
+                    </p>
+                    <p id="pengirim" class="font-bold">Catering Lezat
+                    </p>
+                    <p id="alamat-pengirim" class="">Jl. Mawar No. 78, Jakarta
+                    </p>
+                    <p id="kontak-pengirim" class="">WhatsApp +62 813-9876-5432
+                    </p>
+                    <p id="email-pengirim" class="">cateringlezat@.mail.com.
+                    </p>
+                </div>
+                <!-- pengirim batal -->
+                <div id="penerima-batal">
+                    <p class="font-bold text-[#005461]">Penerima
+                    </p>
+                    <p id="nama-penerima" class="font-bold">Jamanlang Jawir
+                    </p>
+                    <p id="alamat-penerima">Jl. Anggrek No. 45, Jakarta
+                    </p>
+                    <p id="kontak-penerima"> WhatsApp +62 812-123-4567
+                    </p>
+                    <p id="email-penerima">jamalangjawir@email.com
+                    </p>
+                </div>
+            </div>
+            <!-- infomasi pesanan yang di batalkan -->
+
+            <div id="total-pembayaran-gagal"
+                class="flex w-full min-[500px]:text-sm text-[10px] h-auto  justify-between md:px-7 px-2 py-3 rounded-md gap-5 bg-red-200 shadow">
+                <div class="font-[#005461] font-bold">Total Pembayaran</div>
+                <div class="font-bold">Rp 100.000.000,00</div>
+            </div>
+
+            <button id="btn-back" onclick="redirectToNewPage()"
+                class="px-5 py-2  bg-red-200 hover:bg-rose-500 hover:text-slate-50 flex m-auto rounded-xl border border-rose-600 justify-center items-center">kembali
+                ke
+                menu utama</button>
+        </section>
+    </main>
+    <!-- end of content -->
+
+    <!-- start footer -->
+    <footer class="bg-[#de283b] px-10 pb-5 pt-10 w-full">
+        <!-- start footer content -->
+        <div id="footer-content" class="sm:flex sm:justify-between sm:gap-5">
+            <!-- tagline content -->
+            <div id="footer-content--tagline" class="sm:w-1/2 w-full">
+                <!-- logo -->
+                <img class="w-44" src="/assets/icons/logo/logo-mangan-white.svg" alt="" />
+                <!-- tagline -->
+                <h1 class="font-semibold text-white sm:my-4 my-2 mt-6 sm:mt-4">
+                    Temukan katering sesuai dengan preferensi anda dengan mudah dan
+                    cepat di “ManGan”.
+                </h1>
+                <!-- Email -->
+                <h3 class="font-medium text-white">Email : contact@mangan.com</h3>
+            </div>
+
+            <!-- link link -->
+            <div id="footer-content--link" class="flex sm:gap-8 mt-6 justify-between">
+                <div id="footer-layanan" class="font-semibold w-32">
+                    <header class="mb-4 text-white font-bold">Layanan Kami</header>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Tentang
+                        Kami</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Paket
+                        Katering</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Bergabung</a>
+                </div>
+                <div id="footer-social" class="font-semibold w-32">
+                    <header class="mb-4 text-white font-bold">Social</header>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Facebook</a>
+                    <a href="#"
+                        class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Instagram</a>
+                    <a href="#" class="text-white font-normal block my-2 hover:font-semibold focus:font-normal">Twitter
+                        X</a>
+                </div>
+                <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs hidden sm:block">
+                    <header>Learning Partner</header>
+                    <img class="sm:w-40 w-32" src="https://skilvul.com/static/skilvul-logo-white.svg" alt="skilvul" />
+                </div>
+            </div>
+            <div id="footer-partner" class="sm:font-medium text-white my-auto text-xs sm:hidden mt-4">
+                <header>Learning Partner</header>
+                <img class="sm:w-40 w-32" src="https://skilvul.com/static/skilvul-logo-white.svg" alt="skilvul" />
+            </div>
+        </div>
+        <!-- end footer content -->
+
+        <div id="footer-copyright" class="">
+            <p class="text-white text-sm block text-center mt-5">
+                Copyright© 2023 ManGan, ALL RIGHT RESERVED
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+</body>
+
+</html>
