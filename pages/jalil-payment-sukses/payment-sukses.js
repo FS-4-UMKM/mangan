@@ -2,7 +2,9 @@ function redirectToNewPage() {
     window.location.href = '/index.html';
 }
 
-
+function redirectToPageConfirm() {
+    window.location.href = '';
+}
 
 const nameValue = localStorage.getItem("name");
 const porsiValue = localStorage.getItem("porsi");

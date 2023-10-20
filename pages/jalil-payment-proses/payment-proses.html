@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payment failed</title>
+    <title>payment process</title>
     <link rel="stylesheet" href="checkout.css">
     <!-- ===== File styling Header & Footer -->
     <link rel="stylesheet" href="/css/header-footer.css" />
@@ -18,7 +18,7 @@
     <!-- cdn tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="payment-failed.js" defer></script>
+    <script src="payment-process.js" defer></script>
     <!-- ===== File JS Header & Footer -->
     <script src="/js/header-footer.js" defer></script>
 </head>
@@ -33,7 +33,7 @@
                 <!-- end logo -->
                 <!-- list navigasi -->
                 <ul id="list-nav"
-                    class="hidden absolute flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
+                    class="hidden absolute  flex-col w-72 px-4 py-2 rounded-md bg-white shadow right-0 mr-7 mt-5 md:static md:flex md:flex-row md:p-0 md:m-0 md:w-auto md:bg-transparent md:shadow-none md:gap-8 lg:gap-14 font-bold">
                     <li id="list-item"
                         class="py-2 pl-2 rounded hover:text-opacity-60 hover:bg-[#de283a09] md:p-0 md:hover:bg-transparent text-[#DE283B] cursor-pointer">
                         <a href="#">Home</a>
@@ -101,7 +101,7 @@
             </div>
 
             <!-- Hamburger Bar Menu -->
-            <div class="ham-bar block md:hidden ml-8">
+            <div class="ham-bar block md:hidden ml-8 ">
                 <input id="checkbox2" type="checkbox" />
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
@@ -115,10 +115,10 @@
 
     <!-- start content -->
     <main id="content" class="m-4 md:flex md:justify-around md:gap-20 flex ">
-        <section id="img-failed" class="flex-row hidden md:block">
-            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Di batalkan
+        <section id="img-process" class="flex-row hidden md:block">
+            <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan sedang di proses
             </h1>
-            <img src="/assets/images/payment-failed.png" alt="" class="w-[400px] h-auto">
+            <img src="/assets/images/payment-process.png" alt="" class="w-[400px] h-auto">
         </section>
 
         <section id="detail-failed" class="w-full md:w-1/2 flex-row space-y-4 ">
@@ -238,10 +238,16 @@
                 <div class="font-bold">Rp 100.000.000,00</div>
             </div>
 
-            <button id="btn-back" onclick="redirectToNewPage()"
-                class="px-5 py-2  bg-red-200 hover:bg-rose-500 hover:text-slate-50 flex m-auto rounded-xl border border-rose-600 justify-center items-center">kembali
-                ke
-                menu utama</button>
+            <div class="flex justify-around">
+                <button id="btn-back" onclick="redirectToNewPage()"
+                    class="px-5 py-2 transition duration-300 ease-in min-[500px]:text-base text-[10px] p-3 rounded shadow bg-rose-500 hover:bg-red-300 hover:text-black text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">kembali
+                    ke
+                    menu utama</button>
+                <button id="btn-confirm" onclick="redirectToPageConfirm()"
+                    class="px-5 py-2 transition duration-300 ease-out hover:ease-in min-[500px]:text-base text-[10px] p-3 rounded shadow bg-red-200 hover:bg-[#005461] hover:text-slate-50 flex m-auto md:rounded-xl border border-rose-600 justify-center items-center">Konfirmasi
+                    Pesanan</button>
+            </div>
+
         </section>
     </main>
     <!-- end of content -->
