@@ -7,25 +7,17 @@ function redirectToNewPage() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  let data = window.location.search;
-  let params = new URLSearchParams(data);
+const nameValue = localStorage.getItem("name");
+const porsiValue = localStorage.getItem("porsi");
+const dateValue = localStorage.getItem("date");
+const paymentValue = localStorage.getItem("payment");
+const addressValue = localStorage.getItem("address");
+const noteValue = localStorage.getItem("note");
 
-  let nama = params.get("name");
-  document.getElementById("nama-penerima").textContent = nama;
 
-  let porsi = params.get("porsi");
-  document.getElementById("jumlah-porsi").textContent = porsi;
-
-  let date = params.get("date");
-  document.getElementById("tgl-acara").textContent = date;
-
-  let payment = params.get("payment");
-  document.getElementById("metode-pembayaran").textContent = payment;
-
-  let addres = params.get("addres");
-  document.getElementById("catatan").textContent = addres;
-
-  let address = params.get("address");
-  document.getElementById("alamat-penerima").textContent = address;
-})
+document.getElementById("nama-penerima").textContent = nameValue;
+document.getElementById("jumlah-porsi").textContent = porsiValue;
+document.getElementById("tgl-acara").textContent = dateValue;
+document.getElementById("metode-pembayaran").textContent = paymentValue;
+document.getElementById("alamat-penerima").textContent = addressValue;
+document.getElementById("catatan").textContent = noteValue;
