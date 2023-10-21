@@ -8,15 +8,14 @@ searchButton.addEventListener("click", function () {
 });
 
 
-// Path: pages/jalil-checkout/checkout.js
 const btnCheckout = document.getElementById("btn-checkout");
 const btnBatal = document.getElementById("btn-batal");
 const btnAgree = document.getElementById("btn-agree");
-
+// function untuk menampilkan modal
 btnCheckout.addEventListener("click", function () {
     modal.style.display = "block";
 });
-
+// function untuk menutup modal
 btnBatal.addEventListener("click", function () {
     modal.style.display = "none";
 });
@@ -63,10 +62,14 @@ form.addEventListener("submit", function (e) {
 
     localStorage.setItem("hari", hari);
 
+
+
     Window.location.href = "/pages/galang-payment/payment.html";
     Window.location.href = "/pages/jalil-payment-failed/payment-failed.html";
     Window.location.href = "/pages/jalil-payment-proses/payment-proses.html";
 });
 
 
+let code = self.crypto.randomUUID().substring(0, 10);
+localStorage.setItem("code", code);
 

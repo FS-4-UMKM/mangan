@@ -114,6 +114,26 @@
 
     <!-- start content -->
     <main id="content" class="m-4 md:flex md:justify-around md:gap-20 flex ">
+        <div id="modal"
+            class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed shadow-2xl rounded-xl p-3 bg-white ">
+            <div id="modal-header" class="mb-5">
+                <h1 class="font-bold text-[#DE283B]">Konfirmasi</h1>
+            </div>
+            <div id="modal-body">
+                <h1 class="font-bold mb-3">Apakah anda yakin ingin melakukan checkout?</h1>
+                <p class="text-[#DE283B]">Pastikan data yang diinputkan benar dan pastikan pesanan yang anda
+                    pilih
+                    sesuai. Selanjutnya anda
+                    akan diarahkan untuk pembayaran.</p>
+            </div>
+
+            <div class="flex gap-5 justify-center mt-5 items-end">
+                <button id="btn-batal" class=" shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
+                <button type="submit" id="btn-agree" onclick="redirectToNewPage()"
+                    class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white">Checkout</button>
+            </div>
+        </div>
+
         <section id="img-process" class="flex-row hidden md:block">
             <h1 class="text-center text-red-600 text-2xl font-extrabold font-['Outfit']">Pesanan Selesai
             </h1>
@@ -133,7 +153,7 @@
                 <div id="number-order-container">
                     <p class=" text-[#005461]">Nomor Pesanan
                     </p>
-                    <p id="number-order" class="font-[800]">P00107092023S1BOX1
+                    <p id="nomor-pesanan" class="font-[800]">P00107092023S1BOX1
                     </p>
                 </div>
                 <div id="method-payment-container">
@@ -188,7 +208,8 @@
                     <h1 class="font-bold text-[#005461]">Keterangan</h1>
                     <div class="">
                         <p class="leading-none mb-[3px] font-bold ">Tgl acara:</p>
-                        <p id="tgl-acara" class="leading-none font-medium text-[#005461]">20 Oktober 2023, 10.00 WIB</p>
+                        <p id="tgl-acara" class="leading-none font-medium text-[#005461]">20 Oktober 2023, 10.00 WIB
+                        </p>
                     </div>
                     <div class="py-1">
                         <p class="leading-none mb-[3px] font-bold">Jumlah porsi:</p>
@@ -196,7 +217,8 @@
                     </div>
                     <div class="py-1">
                         <p class="leading-none mb-[3px] font-bold">Catatan:</p>
-                        <p id="catatan" class="leading-none font-medium text-[#005461]">Mohon kirim 2 jam sebelum acara
+                        <p id="catatan" class="leading-none font-medium text-[#005461]">Mohon kirim 2 jam sebelum
+                            acara
                             dimulai ya.</p>
                     </div>
                 </div>
