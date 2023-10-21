@@ -9,13 +9,13 @@
     <link rel="shortcut icon" href="assets/icons/logo/logo-icon-mangan.svg" />
     <link rel="stylesheet" href="register.css" />
     <link rel="stylesheet" href="../../css/fonts.css" />
-    <script src="register.js" defer></script>
+
 </head>
 
 <body>
     <div class="container">
         <div class="login">
-            <form action="">
+            <form onsubmit="signup()">
                 <div class="tittle">
                     <a href="http://">
                         kembali</a>
@@ -29,21 +29,19 @@
                 </div>
 
                 <label for="">Nama</label>
-                <input type="text" placeholder="Masukan Nama" />
+                <input type="text" id="nama" name="nama" placeholder="Masukan Nama" />
                 <label for="">Email</label>
-                <input type="email" placeholder="Masukan Email" />
+                <input type="email" id="email" name="email" placeholder="Masukan Email" />
                 <label for="">Password</label>
-                <input type="password" placeholder="password" />
-                <label for="">Ulangi Password</label>
-                <input type="password" placeholder="Ulangi password" />
+                <input type="password" id="password" name="password" placeholder="password" />
                 <label for="">No Hanphone</label>
-                <input type="text" placeholder="Masukan No Hanphone" />
+                <input type="text" id="nohp" name="nohp" placeholder="Masukan No Hanphone" />
                 <p style="display: flex;margin-top: 20px;"><input style="width: 10%;margin: 0;padding: 0;"
                         type="checkbox" name="" id="">Saya setuju
                     dengan
                     Persetujuan pengguna.</p>
                 <div class="button-control">
-                    <button class="submit" type="submit" id="submit">Daftar</button>
+                    <button class="submit" type="submit" id="submit" name="submit">Daftar</button>
                     <a class="register" href="../firman-login/login.html">Login</a>
                 </div>
             </form>
@@ -55,6 +53,7 @@
             </div>
         </div>
     </div>
+    <script src="register.js" defer></script>
 </body>
 
 </html>
