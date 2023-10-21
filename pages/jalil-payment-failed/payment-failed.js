@@ -11,3 +11,5 @@ document.getElementById("metode-pembayaran").textContent = localStorage.getItem(
 document.getElementById("alamat-penerima").textContent = localStorage.getItem("address");
 document.getElementById("catatan").textContent = localStorage.getItem("note");
 document.getElementById("tgl-pemesanan").textContent = localStorage.getItem("hari");
+document.getElementById("nomor-pesanan").textContent = localStorage.getItem("code");
+
