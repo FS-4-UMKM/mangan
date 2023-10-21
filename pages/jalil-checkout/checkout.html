@@ -212,11 +212,15 @@
                             <div id="form-payment"
                                  class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
                                 <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
-                                <input type="text"
-                                       name="payment"
-                                       id="input-payment"
-                                       class="w-full mr-2 outline-none"
-                                       placeholder="Pilih pembayaran">
+                                <select type="text"
+                                        name="payment"
+                                        id="input-payment"
+                                        class="w-full mr-2 outline-none"
+                                        placeholder="Pilih pembayaran">
+                                    <option value="gopay">gopay</option>
+                                    <option value="ovo">ovo</option>
+                                    <option value="dana">dana</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -249,6 +253,8 @@
                         </div>
 
                     </div>
+
+                    <!-- modal untuk Konfirmasi checkout -->
                     <div id="modal"
                          class="flex-row top-9 duration-300 right-3 left-3 md:inset-56 fixed hidden shadow-2xl rounded-xl p-3 bg-white ">
                         <div id="modal-header"

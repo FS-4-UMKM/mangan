@@ -6,21 +6,24 @@ searchButton.addEventListener("click", function () {
   searchInput.focus();
 });
 
-// Path: pages/jalil-checkout/checkout.js
 const btnCheckout = document.getElementById("btn-checkout");
 const btnBatal = document.getElementById("btn-batal");
 const btnAgree = document.getElementById("btn-agree");
-
+// function untuk menampilkan modal
 btnCheckout.addEventListener("click", function () {
   modal.style.display = "block";
 });
-
+// function untuk menutup modal
 btnBatal.addEventListener("click", function () {
   modal.style.display = "none";
 });
 
 function redirectToNewPage() {
   window.location.href = "/pages/galang-payment/payment.html";
+}
+
+function redirectToNewPageWith() {
+  window.location.href = "/pages/jalil-payment-proses/payment-proses.html";
 }
 
 let form = document.getElementById("checkout-form");
@@ -47,6 +50,14 @@ form.addEventListener("submit", function (e) {
   localStorage.setItem("payment", paymentValue);
   localStorage.setItem("address", addressValue);
   localStorage.setItem("note", noteValue);
+
+  const tanggal = new Date();
+
+  const hari = new Intl.DateTimeFormat("id-ID", {
+    dateStyle: "full",
+  }).format(tanggal);
+
+  localStorage.setItem("hari", hari);
 
   Window.location.href = "/pages/galang-payment/payment.html";
   Window.location.href = "/pages/jalil-payment-failed/payment-failed.html";
@@ -114,3 +125,6 @@ async function getDataProduct() {
   });
 }
 getDataProduct();
+
+let code = self.crypto.randomUUID().substring(0, 10);
+localStorage.setItem("code", code);

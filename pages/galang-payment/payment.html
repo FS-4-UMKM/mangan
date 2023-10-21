@@ -125,7 +125,7 @@
                 <header class="font-bold text-lg text-center">Menunggu Pembayaran</header>
                 <div class="flex flex-col items-center">
                     <p>Selesaikan pembayaranmu sebelum :</p>
-                    <h1 class="font-bold text-2xl text-[#de283b]">18 Oktober 2023, 19.00 WIB</h1>
+                    <h1 id="deadline-payment" class="font-bold text-2xl text-[#de283b]">18 Oktober 2023, 19.00 WIB</h1>
                     <p>Untuk menghindari pembatalan otomatis.</p>
                 </div>
                 <div class="flex flex-col items-center my-4">
@@ -230,9 +230,12 @@
 
 
         <!-- Button Pembatalan -->
-        <div class="flex justify-end w-auto mx-10 mb-7">
+        <div class="flex justify-end w-auto mx-10 space-x-6 mb-7">
             <button onclick="redirectToNewPage()"
                 class="px-4 py-1 border-solid border-[1.5px] border-[#de283b] rounded font-semibold text-[#de283b]  bg-white transition-all hover:bg-[#de283b] hover:text-white active:bg-[#de283abd]">Batalkan
+                Pesanan</button>
+            <button onclick="redirectToConfirmPage()"
+                class="px-4 py-1 border-solid border-[1.5px] border-[#de283b] rounded font-semibold text-[#de283b]  bg-white transition-all hover:bg-[#de283b] hover:text-white active:bg-[#de283abd]">Confirmasi
                 Pesanan</button>
         </div>
 
