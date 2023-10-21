@@ -15,5 +15,10 @@ function signup(e) {
 
     var json = JSON.stringify(user);
     localStorage.setItem(email, json);
-    console.log('useradded');
+    // Menampilkan pesan alert
+    alert("Berhasil Mendaftar");
+
+    // Berpindah halaman setelah pengguna menekan OK pada pesan alert
+    window.location.href = "../firman-login/login.html";
+
 }

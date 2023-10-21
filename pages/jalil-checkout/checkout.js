@@ -25,7 +25,9 @@ function redirectToNewPage() {
     window.location.href = '/pages/galang-payment/payment.html';
 }
 
-
+function redirectToNewPageWith() {
+    window.location.href = "/pages/jalil-payment-proses/payment-proses.html";
+}
 
 let form = document.getElementById("checkout-form");
 let nama = document.getElementById("input-name");
@@ -53,9 +55,18 @@ form.addEventListener("submit", function (e) {
     localStorage.setItem("address", addressValue);
     localStorage.setItem("note", noteValue);
 
+    const tanggal = new Date();
+
+    const hari = new Intl.DateTimeFormat("id-ID", {
+        dateStyle: "full",
+    }).format(tanggal);
+
+    localStorage.setItem("hari", hari);
+
     Window.location.href = "/pages/galang-payment/payment.html";
     Window.location.href = "/pages/jalil-payment-failed/payment-failed.html";
     Window.location.href = "/pages/jalil-payment-proses/payment-proses.html";
 });
+
 
 

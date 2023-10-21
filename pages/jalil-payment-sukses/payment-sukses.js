@@ -6,17 +6,10 @@ function redirectToPageConfirm() {
     window.location.href = '';
 }
 
-const nameValue = localStorage.getItem("name");
-const porsiValue = localStorage.getItem("porsi");
-const dateValue = localStorage.getItem("date");
-const paymentValue = localStorage.getItem("payment");
-const addressValue = localStorage.getItem("address");
-const noteValue = localStorage.getItem("note");
-
-
-document.getElementById("nama-penerima").textContent = nameValue;
-document.getElementById("jumlah-porsi").textContent = porsiValue;
-document.getElementById("tgl-acara").textContent = dateValue;
-document.getElementById("metode-pembayaran").textContent = paymentValue;
-document.getElementById("alamat-penerima").textContent = addressValue;
-document.getElementById("catatan").textContent = noteValue;
+document.getElementById("nama-penerima").textContent = localStorage.getItem("name");
+document.getElementById("jumlah-porsi").textContent = localStorage.getItem("porsi");
+document.getElementById("tgl-acara").textContent = localStorage.getItem("date");
+document.getElementById("metode-pembayaran").textContent = localStorage.getItem("payment");
+document.getElementById("alamat-penerima").textContent = localStorage.getItem("address");
+document.getElementById("catatan").textContent = localStorage.getItem("note");
+document.getElementById("tgl-pemesanan").textContent = localStorage.getItem("hari");
