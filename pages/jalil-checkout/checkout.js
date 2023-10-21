@@ -18,10 +18,6 @@ btnBatal.addEventListener("click", function () {
   modal.style.display = "none";
 });
 
-function redirectToNewPage() {
-  window.location.href = "/pages/galang-payment/payment.html";
-}
-
 function redirectToNewPageWith() {
   window.location.href = "/pages/jalil-payment-proses/payment-proses.html";
 }
@@ -33,6 +29,7 @@ let date = document.getElementById("input-date");
 let payment = document.getElementById("input-payment");
 let address = document.getElementById("input-address");
 let note = document.getElementById("input-note");
+let namaPaket = document.querySelector("#nama-paket");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -43,6 +40,7 @@ form.addEventListener("submit", function (e) {
   const paymentValue = payment.value;
   const addressValue = address.value;
   const noteValue = note.value;
+  const namaPaketValue = namaPaket.textContent;
 
   localStorage.setItem("name", nameValue);
   localStorage.setItem("porsi", porsiValue);
@@ -50,6 +48,7 @@ form.addEventListener("submit", function (e) {
   localStorage.setItem("payment", paymentValue);
   localStorage.setItem("address", addressValue);
   localStorage.setItem("note", noteValue);
+  localStorage.setItem("namapaket", namaPaketValue);
 
   const tanggal = new Date();
 
@@ -120,11 +119,16 @@ async function getDataProduct() {
     let totalPorsi = event.target.value;
     let hargaMenu = selectedMenu[0].hargaMenu;
     let total = hargaMenu * totalPorsi;
-    console.log("total hatga : Rp" + total.toLocaleString("id-ID"));
+    console.log("total harga : Rp" + total.toLocaleString("id-ID"));
     totalHarga.textContent = `Rp${total.toLocaleString("id-ID")}`;
+    localStorage.setItem("totalprice", `Rp${total.toLocaleString("id-ID")}`);
   });
 }
 getDataProduct();
 
 let code = self.crypto.randomUUID().substring(0, 10);
 localStorage.setItem("code", code);
+
+function redirectToNewPage() {
+  window.location.href = `/pages/galang-payment/payment.html?id=${id}&menu=${menu}`;
+}
