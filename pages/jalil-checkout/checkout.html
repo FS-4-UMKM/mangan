@@ -163,8 +163,12 @@
                             <div id="form-payment"
                                 class="md:w-72 h-9 flex items-center gap-2 rounded-lg bg-white p-5 my-2">
                                 <i class="fa-solid fa-credit-card text-[#DE283B]"></i>
-                                <input type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
+                                <select type="text" name="payment" id="input-payment" class="w-full mr-2 outline-none"
                                     placeholder="Pilih pembayaran">
+                                    <option value="gopay">gopay</option>
+                                    <option value="ovo">ovo</option>
+                                    <option value="dana">dana</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -203,7 +207,7 @@
                                 akan diarahkan untuk pembayaran.</p>
                         </div>
                         <div class="flex gap-5 justify-center mt-5 items-end">
-                            <button id="btn-batal"
+                            <button id="btn-batal" onclick="redirectToNewPageWith()"
                                 class=" shadow-xl w-32 rounded-xl p-3 bg-white text-[#DE283B]">Batal</button>
                             <button type="submit" id="btn-agree" onclick="redirectToNewPage()"
                                 class=" shadow-xl w-32 rounded-xl p-3 bg-[#DE283B] text-white">Checkout</button>
