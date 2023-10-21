@@ -162,3 +162,24 @@ async function setMenu(menu) {
     });
   });
 }
+
+function btnPesan() {
+  const btnPesan = document.querySelector("#btn-pesan-katering");
+  const menu = document.querySelector("#selected-menu");
+  btnPesan.addEventListener("click", function () {
+    let selectedMenu = menu.textContent;
+    if (selectedMenu == "Pilih Menu") {
+      alert("pilih menu dulu");
+    } else {
+      console.log(selectedMenu);
+      let konfirmasi = confirm("Apakah yakin checkout pesanan ini?");
+      if (konfirmasi) {
+        console.log(`id produk : ${idProduct} key : ${selectedMenu}`);
+        window.location.href = `/pages/jalil-checkout/checkout.html?id=${idProduct}&menu=${selectedMenu}`;
+      } else {
+        console.log("Batal");
+      }
+    }
+  });
+}
+btnPesan();
