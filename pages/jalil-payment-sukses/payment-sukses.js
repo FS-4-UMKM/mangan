@@ -1,6 +1,6 @@
-// function redirectToNewPage() {
-//     window.location.href = '/index.html';
-// }
+function redirectToNewPage() {
+    window.location.href = '/index.html';
+}
 
 const btnCheckout = document.getElementById("btn-checkout");
 const btnBatal = document.getElementById("btn-batal");
